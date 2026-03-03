@@ -51,6 +51,6 @@ CHANGES.md
 venv/
 .venv/
 
-# Report PDF is built locally; only .tex is in repo
+# Report: build locally with pdflatex (not in repo)
 csao_report.pdf
 csao_report.tex
