@@ -1,0 +1,253 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base ─────────────────────────────────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #F5F3F1;
+    color: #1C1C1C;
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* ── Utility classes ──────────────────────────────────────────────────────── */
+@layer components {
+  .z-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  }
+
+  .z-shadow {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  }
+
+  .text-secondary {
+    color: #686B78;
+  }
+
+  .z-divider {
+    border: none;
+    border-top: 1px solid #E8E8E8;
+    margin: 0;
+  }
+}
+
+/* ── Scrollbar ────────────────────────────────────────────────────────────── */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+.scrollbar-thin::-webkit-scrollbar { height: 4px; width: 4px; }
+.scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: #E8E8E8; border-radius: 999px; }
+
+/* ── Cart item enter / exit ───────────────────────────────────────────────── */
+.cart-item-enter {
+  animation: cartEnter 0.25s ease forwards;
+}
+.cart-item-exit {
+  animation: cartExit 0.2s ease forwards;
+}
+
+@keyframes cartEnter {
+  from { opacity: 0; transform: scale(0.95) translateX(-8px); }
+  to   { opacity: 1; transform: scale(1)    translateX(0); }
+}
+@keyframes cartExit {
+  from { opacity: 1; transform: scale(1);   max-height: 60px; }
+  to   { opacity: 0; transform: scale(0.95); max-height: 0; padding: 0; margin: 0; }
+}
+
+/* ── Recommendation card stagger ─────────────────────────────────────────── */
+.rec-card {
+  opacity: 0;
+  animation: recFadeIn 0.35s ease forwards;
+}
+.rec-card:nth-child(1) { animation-delay: 0ms; }
+.rec-card:nth-child(2) { animation-delay: 50ms; }
+.rec-card:nth-child(3) { animation-delay: 100ms; }
+.rec-card:nth-child(4) { animation-delay: 150ms; }
+.rec-card:nth-child(5) { animation-delay: 200ms; }
+
+@keyframes recFadeIn {
+  from { opacity: 0; transform: translateY(14px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0)    scale(1); }
+}
+
+/* ── Rail slide-up ────────────────────────────────────────────────────────── */
+.rail-slide-in {
+  animation: railSlideUp 0.35s ease-out forwards;
+}
+@keyframes railSlideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Completeness bar ─────────────────────────────────────────────────────── */
+.completeness-fill {
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #60B246;
+}
+
+/* ── Tooltip ──────────────────────────────────────────────────────────────── */
+.tooltip-wrap {
+  position: relative;
+}
+.tooltip-body {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1C1C1C;
+  color: #fff;
+  font-size: 11px;
+  line-height: 1.5;
+  padding: 8px 10px;
+  border-radius: 8px;
+  white-space: normal;
+  min-width: 160px;
+  max-width: 220px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.18s ease;
+  z-index: 50;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+}
+.tooltip-body::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: #1C1C1C;
+}
+.tooltip-wrap:hover .tooltip-body {
+  opacity: 1;
+}
+
+/* ── Skeleton ─────────────────────────────────────────────────────────────── */
+.skeleton {
+  background: #E8E8E8;
+  border-radius: 6px;
+  animation: skeletonPulse 1.5s ease-in-out infinite;
+}
+@keyframes skeletonPulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.45; }
+}
+
+/* ── ADD button → Stepper transition ─────────────────────────────────────── */
+.add-btn-appear {
+  animation: addPop 0.22s ease forwards;
+}
+@keyframes addPop {
+  0%   { transform: scale(0.82); }
+  65%  { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* ── CTA pulse ────────────────────────────────────────────────────────────── */
+.cta-active {
+  animation: ctaPulse 2.2s ease-in-out infinite;
+}
+@keyframes ctaPulse {
+  0%, 100% { box-shadow: 0 4px 16px rgba(226,55,68,0.28); }
+  50%      { box-shadow: 0 6px 28px rgba(226,55,68,0.52); }
+}
+
+/* ── AOV delta pulse ──────────────────────────────────────────────────────── */
+.aov-delta-animate {
+  animation: deltaPulse 0.4s ease;
+}
+@keyframes deltaPulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.07); }
+  100% { transform: scale(1); }
+}
+
+/* ── Veg / Non-veg indicator ──────────────────────────────────────────────── */
+.veg-indicator {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  border: 1.5px solid #60B246;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.veg-indicator.nonveg {
+  border-color: #DB3A34;
+}
+.veg-indicator .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #60B246;
+}
+.veg-indicator.nonveg .dot {
+  background: #DB3A34;
+}
+
+/* ── Menu row ─────────────────────────────────────────────────────────────── */
+.menu-row:hover {
+  background: #F5F3F1;
+}
+.menu-row.in-cart {
+  border-bottom: 2px solid #60B246;
+}
+
+/* ── Mobile cart sheet ────────────────────────────────────────────────────── */
+.cart-sheet-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 40;
+  animation: fadeInOverlay 0.2s ease;
+}
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.cart-sheet {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-radius: 20px 20px 0 0;
+  z-index: 50;
+  animation: sheetSlideUp 0.3s ease-out;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+@keyframes sheetSlideUp {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+
+/* ── Score relevance bar ──────────────────────────────────────────────────── */
+.score-bar-track {
+  height: 3px;
+  background: #E8E8E8;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.score-bar-fill {
+  height: 100%;
+  background: #60B246;
+  border-radius: 2px;
+  transition: width 0.5s ease;
+}

@@ -1,0 +1,32 @@
+# =============================================================================
+# ZOMATO CSAO RAIL RECOMMENDATION SYSTEM — Dependencies
+# =============================================================================
+
+# ── Core data ─────────────────────────────────────────────────────────────────
+numpy==1.26.4
+pandas==2.2.2
+
+# ── ML / Ranking ──────────────────────────────────────────────────────────────
+scikit-learn==1.4.2
+lightgbm==4.3.0
+
+# ── Deep learning (SASRec, embeddings) ───────────────────────────────────────
+torch==2.3.0
+# torchvision==0.18.0   # only if image features added later
+
+# ── Vector DB / fast ANN search ───────────────────────────────────────────────
+faiss-cpu==1.8.0
+
+# ── API serving (Phase 5) ─────────────────────────────────────────────────────
+fastapi==0.111.0
+uvicorn[standard]==0.30.1
+httpx==0.27.0          # for latency benchmarking client
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+tqdm==4.66.4
+python-dotenv==1.0.1
+
+# ── Notebooks / EDA (optional but recommended for Phase 2 exploration) ────────
+jupyterlab==4.2.1
+matplotlib==3.9.0
+seaborn==0.13.2

@@ -1,0 +1,831 @@
+\documentclass[11pt,a4paper]{article}
+
+% ── Packages ──────────────────────────────────────────────────────────────────
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{tcolorbox}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{mdframed}
+\usepackage{setspace}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{ragged2e}
+
+% ── Zomato brand colours ──────────────────────────────────────────────────────
+\definecolor{zomato}{RGB}{225, 40, 40}
+\definecolor{zomalight}{RGB}{255, 235, 235}
+\definecolor{zomadk}{RGB}{160, 20, 20}
+\definecolor{accent}{RGB}{30, 30, 30}
+\definecolor{muted}{RGB}{100, 100, 100}
+\definecolor{highlight}{RGB}{255, 248, 220}
+\definecolor{good}{RGB}{34, 139, 34}
+\definecolor{codebg}{RGB}{245, 245, 245}
+
+% ── Hyperref ──────────────────────────────────────────────────────────────────
+\hypersetup{
+  colorlinks = true,
+  linkcolor  = zomato,
+  urlcolor   = zomadk,
+  citecolor  = zomadk,
+  pdftitle   = {Zomato CSAO Recommendation System -- Hackathon Report},
+  pdfauthor  = {Binary Insights (Kunal Sharma, Anshika Tyagi)},
+}
+
+% ── Section formatting ────────────────────────────────────────────────────────
+\titleformat{\section}
+  {\Large\bfseries\color{zomato}}{\thesection.}{0.6em}{}
+  [\color{zomato}\titlerule]
+
+\titleformat{\subsection}
+  {\normalsize\bfseries\color{accent}}{\thesubsection}{0.5em}{}
+
+\titleformat{\subsubsection}
+  {\small\bfseries\color{muted}}{}{0em}{}
+
+\titlespacing*{\section}{0pt}{14pt}{6pt}
+\titlespacing*{\subsection}{0pt}{8pt}{3pt}
+
+% ── Header / Footer ───────────────────────────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{muted}\textbf{Zomato Hackathon 2026} -- PS2: CSAO Rail Recommendation}
+\fancyhead[R]{}
+\fancyfoot[C]{\small\color{muted}\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% ── tcolorbox environments ────────────────────────────────────────────────────
+\tcbuselibrary{skins, breakable}
+
+% execbox: a titled colored box. The title text (e.g. "Solution Overview") 
+% appears as a small red tab on the top-left corner of the box.
+\newtcolorbox{execbox}[1][]{
+  colback=zomalight, colframe=zomato, boxrule=1.5pt, arc=4pt,
+  fonttitle=\bfseries\color{white}, coltitle=white,
+  attach boxed title to top left={yshift=-2mm,xshift=6mm},
+  boxed title style={colback=zomato,arc=3pt}, breakable,
+  #1
+}
+
+\newtcolorbox{metricbox}{
+  colback=highlight, colframe=accent, boxrule=0.8pt, arc=3pt, breakable,
+}
+
+\newtcolorbox{archbox}{
+  colback=codebg, colframe=muted, boxrule=0.8pt, arc=3pt,
+  fontupper=\small\ttfamily, breakable,
+}
+
+% ── KPI tile macro ────────────────────────────────────────────────────────────
+\newcommand{\kpi}[2]{%
+  \begin{tcolorbox}[colback=zomalight,colframe=zomato,arc=3pt,
+    boxrule=1pt,halign=center,valign=center,height=1.8cm,width=4.2cm]
+    {\large\bfseries\color{zomato}#1}\\[2pt]
+    {\footnotesize\color{accent}#2}
+  \end{tcolorbox}%
+}
+
+% ── Convenience symbols ───────────────────────────────────────────────────────
+\newcommand{\YES}{$\checkmark$}
+\newcommand{\NO}{$\times$}
+\newcommand{\STAR}{$\star$}
+\newcommand{\UP}{$\uparrow$}
+\newcommand{\DOWN}{$\downarrow$}
+\newcommand{\TO}{$\rightarrow$}
+\newcommand{\GEQ}{$\geq$}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+
+% ── listings style ────────────────────────────────────────────────────────────
+\lstset{
+  basicstyle=\small\ttfamily,
+  backgroundcolor=\color{codebg},
+  frame=single,
+  frameround=tttt,
+  rulecolor=\color{muted},
+  breaklines=true,
+  columns=fullflexible,
+  keepspaces=true,
+}
+
+% =============================================================================
+\begin{document}
+% =============================================================================
+
+% ── TITLE PAGE ────────────────────────────────────────────────────────────────
+\begin{titlepage}
+  \begin{center}
+    \vspace*{1cm}
+    {\Huge\bfseries\color{zomato}Zomato Hackathon 2026}\\[6pt]
+    {\large\color{muted}Problem Statement 2}\\[12pt]
+    \rule{\linewidth}{2pt}\\[12pt]
+    {\LARGE\bfseries Cart Super Add-On (CSAO)\\[4pt]Rail Recommendation System}\\[8pt]
+    \rule{\linewidth}{0.8pt}\\[20pt]
+
+    \begin{center}
+      \begin{tabular}{ccc}
+        \kpi{4.56ms}{Mean Inference Latency} &
+        \kpi{+5.7\%}{Projected AOV Lift} &
+        \kpi{0.705}{AUC-ROC (Test Set)} \\[6pt]
+        \kpi{7.01ms}{p99 Latency} &
+        \kpi{Rs.1{,}586 Cr}{Annual Revenue Lift} &
+        \kpi{28x}{Faster Than 200ms SLA}
+      \end{tabular}
+    \end{center}
+
+    \vfill
+    {\large\bfseries Team:} \textbf{Binary Insights}\\[4pt]
+    {\large\bfseries Members:} Kunal Sharma, Anshika Tyagi\\[4pt]
+    {\large\bfseries Submission Date:} March 2, 2026\\[8pt]
+    \textcolor{muted}{\small GitHub Repo:
+      \url{https://github.com/kunallll17/Cart-Super-Add-On--CSAO--Rail-Recommendation-System}}\\
+    \textcolor{muted}{\small Dataset: Reproduced via
+      \texttt{phase1\_data\_generation.py} (SEED=42)}
+  \end{center}
+\end{titlepage}
+
+% =============================================================================
+\section{Executive Summary}
+% =============================================================================
+
+% NOTE: "title=Solution Overview" sets the text shown on the red tab
+% at the top-left of this highlighted box. Change it to anything you like.
+\begin{execbox}[title=Solution Overview]
+\begin{itemize}[leftmargin=*, noitemsep]
+
+  \item \textbf{Architecture.}
+    A two-tower pipeline: an \emph{offline} LLM-derived Food Knowledge Graph
+    (128-d FAISS embeddings with PMI co-occurrence signals ---
+    Biryani \TO{} Raita \TO{} Coke) wired to an \emph{online} LightGBM
+    LambdaRank re-ranker operating over 43 cart-contextual features.
+    Mean inference latency \textbf{4.56 ms}; p99 \textbf{7.01 ms} ---
+    28$\times$ under the 200 ms SLA.
+
+  \item \textbf{Metrics (held-out test set, 20\% temporal split, zero user overlap).}
+    \textbf{AUC = 0.705}, \textbf{MRR = 0.651},
+    \textbf{NDCG@5 = 0.738}, MAP@5 = 0.651, AUPR = 0.229.
+    Cold-start users match warm-user NDCG identically (0.747 vs.\ 0.744) ---
+    validating the FAISS semantic fallback strategy.
+
+  \item \textbf{Business Impact.}
+    At Zomato's 2M daily sessions: \textbf{+Rs.21.60 AOV lift per order
+    (+5.7\%)}, C2O conversion \textbf{72.0\% \TO{} 72.41\% (+0.41 pp)},
+    projected \textbf{annual revenue lift Rs.1{,}586 Crore} ---
+    fully derived from Precision@5 and empirical acceptance benchmarks.
+
+\end{itemize}
+\end{execbox}
+
+% =============================================================================
+\section{Ideation \& Problem Formulation (15\%)}
+% =============================================================================
+
+\subsection{Mathematical Framing}
+
+We formalised CSAO recommendation as a \textbf{Session-Based Next-Basket
+Ranking} problem --- not binary classification --- because the
+\emph{position} of an item on the CSAO rail directly determines its
+click probability.
+
+\medskip
+\textbf{Formal definition.}
+Let $S = \langle i_1, i_2, \ldots, i_t \rangle$ be the ordered sequence of
+items added so far. Learn a scoring function:
+\[
+  f_\theta\!\left(i \mid S,\, u,\, r,\, \tau\right) \;\in\; \mathbb{R}
+\]
+over candidates $i \in \mathcal{C} \subset \mathcal{M}_r$ conditioned on
+cart state $S$, user $u$, restaurant $r$, and temporal context $\tau$.
+We optimise \textbf{NDCG} via \textbf{LambdaRank}:
+\[
+  \lambda_{ij} \;=\;
+  \frac{-\sigma}{1+e^{\sigma(s_i - s_j)}}
+  \cdot \left|\Delta\text{NDCG}_{ij}\right|
+\]
+The $|\Delta\text{NDCG}_{ij}|$ weight ensures gradients are largest for
+swaps that would most hurt ranking quality --- directly optimising
+the rail's primary business signal.
+
+\subsection{Constraint Handling}
+
+% FIX: reduced first-column width and wrapped in \small to prevent overflow
+{\small
+\begin{tabularx}{\linewidth}{>{\bfseries\RaggedRight\arraybackslash}p{2.8cm} >{\RaggedRight\arraybackslash}X}
+  \toprule
+  Challenge & Solution \\
+  \midrule
+  Incomplete Meal Patterns &
+    Offline FAISS embeddings encode meal-completeness affinity,
+    boosted by PMI co-occurrence signals.
+    Even a single-item cart yields semantically cohesive complements. \\[4pt]
+  Cold-Start Users &
+    Users with $\leq$2 orders: mean-cart-embedding + global popularity
+    as FAISS query. Empirically zero metric degradation vs.\ warm users
+    (NDCG@5: cold 0.747 vs.\ warm 0.744). \\[4pt]
+  Cold-Start Restaurants &
+    New restaurants (10\% of catalogue) seeded with LLM cuisine-family
+    embeddings rather than demand signals. \\[4pt]
+  Diversity &
+    Cart cuisine entropy (mean = 0.113 nats) monitored at serving time.
+    MMR post-ranker toggled if entropy falls below $\epsilon = 0.02$. \\
+  \bottomrule
+\end{tabularx}
+}
+
+% =============================================================================
+\section{Data Preparation \& Feature Engineering (20\%)}
+% =============================================================================
+
+\subsection{Hyper-Realistic Synthetic Dataset (v2 --- Expanded)}
+
+{\small
+\begin{center}
+\begin{tabular}{lrrr}
+  \toprule
+  \textbf{Table} & \textbf{Rows} & \textbf{Columns} & \textbf{Cold-Start} \\
+  \midrule
+  \texttt{users.csv}              & 500      & 9  & 15\% (75 users) \\
+  \texttt{restaurants.csv}        & 80       & 8  & 10\%  (8 restaurants) \\
+  \texttt{menu\_items.csv}        & 788      & 9  & --- \\
+  \texttt{historical\_orders.csv} & 8{,}600+ & 12 & --- \\
+  \texttt{cart\_sessions.csv}     & 48{,}000+& 17 & --- \\
+  \bottomrule
+\end{tabular}
+\end{center}
+}
+\smallskip
+{\small 18{,}000 sessions; avg.\ 2.7 add-events/session; 8{,}600 orders; per-event negative sampling (4 negatives/query).}
+
+\medskip
+\textbf{Behavioural patterns injected:}
+\begin{itemize}[noitemsep, leftmargin=*]
+  \item \textbf{Complete Meal (40\%):}
+    Main \TO{} Side (p=0.60) \TO{} Beverage (p=0.70) \TO{} Dessert (p=0.25)
+  \item \textbf{Starter + Meal (15\%):}
+    Starter \TO{} Main \TO{} Side \TO{} Beverage
+  \item \textbf{Impulse Beverage (15\%):} Single main + rapid beverage add
+  \item \textbf{Snack-Only (15\%):} 1--2 item sessions (quick cravings)
+  \item \textbf{Random (15\%):} Exploratory multi-category carts
+  \item \textbf{Temporal slots:}
+    Dinner 40\%, Lunch 30\%, Late-Night 12\%, Breakfast 10\%, Tea-Time 8\%
+  \item \textbf{Weekend skew:} 35\% of sessions on Sat/Sun with higher
+    indulgence (Biryani, Desserts)
+\end{itemize}
+
+\textbf{Menu coverage:} 8 cuisine families $\times$ 5 categories
+(incl.\ starters); price bands Rs.39--Rs.549.
+
+\subsection{Feature Engineering --- 43-Feature Model Vector (v2)}
+
+% FIX: wrapped in \small and adjusted column proportions to prevent overflow
+{\small
+\begin{center}
+\begin{tabularx}{\linewidth}{>{\bfseries\RaggedRight\arraybackslash}p{2.1cm} >{\RaggedRight\arraybackslash}X >{\centering\arraybackslash}p{1cm}}
+  \toprule
+  Group & Features & Count \\
+  \midrule
+  Cart State &
+    cart\_size, dominant\_cat, has\_main, has\_side, has\_bev,
+    has\_dessert, \textbf{has\_starter}, avg\_price, value\_before\_add,
+    cuisine\_entropy, \textbf{cart\_completeness},
+    cat\_ratio\_main / side / bev / dessert / starter & 16 \\[3pt]
+  Temporal &
+    hour\_sin, hour\_cos (cyclical), is\_weekend, slot\_encoded & 4 \\[3pt]
+  User &
+    lifetime\_orders, is\_cold\_start, user$\times$cuisine affinity,
+    \textbf{8 cuisine affinity scores} (per-user preference fractions) & 11 \\[3pt]
+  Item (norm.) &
+    base\_price, popularity, order\_freq, avg\_qty, reorder\_rate,
+    cart\_freq, avg\_cart\_position, cart\_add\_rate,
+    cuisine\_enc, category\_enc, price\_tier\_enc & 11 \\[3pt]
+  Interaction &
+    \textbf{price\_delta} (candidate price $-$ cart average price) & 1 \\
+  \midrule
+  \textbf{Total} & & \textbf{43} \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+}
+
+\textbf{Key decisions:}
+Cyclical hour encoding ($\sin/\cos$) prevents the 23\TO0 cliff.
+\textbf{Cart completeness score} = weighted sum (main 0.40, bev 0.25, side 0.20,
+dessert 0.10, starter 0.05) quantifies how ``complete'' the meal is.
+\textbf{PMI co-occurrence} boosts affinity graph edges between
+items frequently ordered together.
+Shannon entropy of cart cuisines quantifies diversity.
+
+% =============================================================================
+\section{Model Architecture \& The ``AI Edge'' (20\%)}
+% =============================================================================
+
+\subsection{Why Neither Pure LLM nor Pure CF Works}
+
+% FIX: \small + tabularx to prevent last-column overflow
+{\small
+\begin{center}
+\begin{tabularx}{\linewidth}{>{\RaggedRight\arraybackslash}X c c c}
+  \toprule
+  \textbf{Approach} & \textbf{Latency} & \textbf{Meal Sem.} &
+    \textbf{Personal.} \\
+  \midrule
+  Pure LLM at inference (GPT-4o) & 2--8\,s & \YES & Partial \\
+  Collaborative Filtering only   & $<$10\,ms & \NO  & \YES \\
+  Popularity heuristic           & $<$1\,ms  & \NO  & \NO \\
+  \rowcolor{zomalight}
+  \textbf{FAISS + LightGBM (Ours)} & \textbf{4.56\,ms} & \textbf{\YES} &
+    \textbf{\YES} \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+}
+
+\subsection{Offline Embedding Pipeline (The AI Edge)}
+
+\textbf{Step 1 --- Food Knowledge Graph + PMI.}
+Build weighted directed affinity graph $G=(V,E,w)$:
+$|V|=788$ items, edges boosted by \textbf{PMI co-occurrence} signals.\\
+Edge weight:
+$w(i \rightarrow j) =
+  w_{\text{cat}}(i,j)
+  \cdot (0.5 + 0.5\cdot\text{pop}_j)
+  + 0.30\cdot\mathbf{1}[\text{cuisine}_i = \text{cuisine}_j]
+  + 0.15\cdot\text{PMI}(i,j)$
+
+\medskip
+\textbf{Step 2 --- Message-passing embeddings.}
+Initialise 12-d structural features, project to 128-d, run 20 iterations:
+\[
+  \mathbf{h}_v^{(t+1)} =
+  0.6\,\mathbf{h}_v^{(t)} +
+  0.4\,\frac{\sum_{u\in\mathcal{N}(v)} w(v,u)\,\mathbf{h}_u^{(t)}}
+             {\sum_{u\in\mathcal{N}(v)} w(v,u)}
+\]
+In production, \textbf{GPT-4o-mini} descriptions replace
+$\mathbf{h}_v^{(0)}$ for richer food-domain grounding.
+
+\medskip
+\textbf{Step 3 --- FAISS IndexFlatIP.}
+L2-normalised embeddings \TO{} Inner Product $\equiv$ cosine similarity.
+Exact ANN retrieval in \textbf{0.223 ms}.
+
+\medskip
+\textbf{FAISS sanity check --- top-5 complements for ``Chicken Biryani'':}
+
+% FIX: switched to tabularx with X column for item name to prevent overflow
+{\small
+\begin{center}
+\begin{tabularx}{\linewidth}{c >{\RaggedRight\arraybackslash}X l l r}
+  \toprule
+  Rank & Item & Cuisine & Category & Cos-Sim \\
+  \midrule
+  1 & Mirchi Ka Salan & Biryani  & sides     & 0.9632 \\
+  2 & Boiled Egg      & Biryani  & sides     & 0.9418 \\
+  3 & Raita           & N.\ Indian & sides   & 0.9105 \\
+  4 & Coca-Cola       & Biryani  & beverages & 0.8873 \\
+  5 & Gulab Jamun     & Biryani  & desserts  & 0.8741 \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+}
+\smallskip
+{\small Cosine similarity decreases as items move from same-cuisine sides to cross-cuisine desserts --- confirming the graph message-passing captures meal-completeness semantics correctly.}
+
+\subsection{Online Re-Ranking --- LightGBM LambdaRank}
+
+{\small
+\begin{center}
+\begin{tabularx}{\linewidth}{>{\RaggedRight\arraybackslash}p{4cm} >{\RaggedRight\arraybackslash}X}
+  \toprule
+  \textbf{Parameter} & \textbf{Value} \\
+  \midrule
+  Objective         & lambdarank (NDCG@5/10) \\
+  Num leaves        & 63 \\
+  Learning rate     & 0.05 \\
+  Feature fraction  & 0.80 \\
+  Bagging fraction  & 0.80 \\
+  Best iteration    & 21 (early stop, patience=40) \\
+  Training features & 43 (up from 27 in v1) \\
+  Query groups      & per-event (1 pos + 4 neg = 5 items/group) \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+}
+
+\textbf{Key v2 improvements:} Per-event query groups with same-restaurant
+negative sampling ensure LambdaRank receives realistic ranking signal.
+PMI co-occurrence, cart completeness, and cuisine affinity features
+provide richer item--context interaction.
+
+% =============================================================================
+\section{System Design \& Production Readiness (15\%)}
+% =============================================================================
+
+\subsection{Architecture Overview}
+
+The system follows a \textbf{two-tower retrieval + re-ranking} architecture.
+The offline tower builds semantic item embeddings via graph message-passing;
+the online tower constructs cart-contextual features and scores candidates
+through LightGBM LambdaRank.
+Architecture stages with measured latencies:
+
+\begin{archbox}
+\begin{lstlisting}
+OFFLINE PIPELINE  (runs nightly)
+  GPT-4o descriptions -> Text Embeddings -> Graph Message Passing
+  -> L2-normalise -> FAISS IndexFlatIP
+  -> item_embeddings.npy + faiss_item_index.bin
+
+ONLINE SERVING  (FastAPI + Uvicorn, artefacts pre-loaded at boot)
+
+  POST /recommend
+    |
+    +-- Stage 1: Mean cart embedding -> FAISS.search(k=50)   0.223ms
+    |   Returns 50 semantically compatible candidate IDs
+    |
+    +-- Stage 2: Feature construction (cart ctx x 50 items)  3.863ms
+    |   (production: Redis feature store reduces to <1ms)
+    |
+    +-- Stage 3: LightGBM.predict (21 trees, 43 features)    0.476ms
+    |   argsort -> top-K ranked items
+    |
+    +-- Stage 4: JSON serialisation                           ~0.1ms
+
+  Total mean: 4.56ms  |  p99: 7.01ms  |  Budget: 200ms
+\end{lstlisting}
+\end{archbox}
+
+\subsection{Latency Budget}
+
+\begin{metricbox}
+{\small
+\begin{center}
+\begin{tabularx}{\linewidth}{>{\RaggedRight\arraybackslash}X r r r}
+  \toprule
+  \textbf{Stage} & \textbf{Mean} & \textbf{Budget} & \textbf{Headroom} \\
+  \midrule
+  FAISS ANN retrieval (788 vecs, 128-d, exact IP) &  0.22\,ms &   5\,ms & 96\% \\
+  Feature construction (cart ctx + item join)     &  3.86\,ms &  50\,ms & 92\% \\
+  LightGBM inference (21 trees, 43 features)      &  0.48\,ms &  20\,ms & 98\% \\
+  Serialisation + network (estimated)             &  0.10\,ms &  10\,ms & 99\% \\
+  \midrule
+  \textbf{Total (mean / p99)} & \textbf{4.56 / 7.01\,ms} &
+    \textbf{200\,ms} & \textcolor{good}{\textbf{100\%}} \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+}
+\end{metricbox}
+
+SLA compliance across 500 benchmark requests:
+\textbf{100\%} under 50 ms; \textbf{100\%} under 100 ms;
+\textbf{100\%} under 200 ms.
+397/500 requests completed in the 0--5 ms bucket.
+
+\subsection{Scalability at Zomato Peak Hours}
+
+\begin{itemize}[noitemsep, leftmargin=*]
+  \item \textbf{FAISS scaling:} At 1M items, \texttt{IndexFlatIP}
+    \TO{} \texttt{IndexIVF-PQ} (recall $>$99\%, $10\times$ throughput).
+  \item \textbf{Feature store:} Redis Hash per (user\_id, item\_id)
+    replaces in-process pandas join --- Stage 2 from 3.9 ms \TO{} $<$1 ms.
+  \item \textbf{Model serving:} LightGBM \TO{} ONNX \TO{} Triton
+    Inference Server for GPU-batched scoring ($>$50k RPS/GPU).
+  \item \textbf{Request cache:}
+    Hash(restaurant\_id, cart\_fingerprint, slot) \TO{} Redis TTL=120s.
+    Estimated 30--40\% cache hit rate during Dinner peak (7--10 pm).
+  \item \textbf{Autoscaling:} Kubernetes HPA on latency p95 (target
+    $<$20 ms). Stateless pods; artefacts as read-only S3 mounts.
+\end{itemize}
+
+% =============================================================================
+\section{Model Evaluation \& Fine-Tuning Strategy (15\%)}
+% =============================================================================
+
+\subsection{Temporal Train/Test Split --- Zero Leakage (v2)}
+
+The dataset is split strictly by \textbf{session\_timestamp}
+(true chronological order, not an \texttt{event\_seq} proxy):
+the earliest 80\% of sessions form the training set,
+and the most recent 20\% form the test set.
+A 10\% validation slice (by time) is carved from the training end
+for early stopping.
+\textbf{No session or user appears in both splits} --- zero leakage.
+All normalisers (MinMaxScaler, LabelEncoders) are fit exclusively on
+training data and applied to the test set --- eliminating target leakage,
+recency bias, and future-data contamination.
+
+\textbf{Negative candidate sampling:} For each cart event, 4 same-restaurant
+negative items are added to create 5-item query groups
+(1 positive + 4 negatives), giving LambdaRank realistic pairwise gradients.
+
+\subsection{Comprehensive Offline Metrics (v2)}
+
+{\small
+\begin{center}
+\begin{tabularx}{\linewidth}{l c c >{\RaggedRight\arraybackslash}X}
+  \toprule
+  \textbf{Metric} & \textbf{Our Model} & \textbf{Pop.\ BL} &
+    \textbf{Why It Matters for CSAO} \\
+  \midrule
+  AUC-ROC      & 0.705 & 0.600 & Item-level add/no-add discrimination \\
+  AUPR         & 0.229 & ---   & Robust under class imbalance \\
+  MRR          & 0.651 & 0.339 & First rail slot = highest CTR position \\
+  NDCG@5       & 0.738 & 0.406 & Primary optimisation target \\
+  NDCG@10      & 0.738 & 0.406 & Secondary ranking depth \\
+  MAP@5        & 0.651 & ---   & Avg.\ precision across relevant positions \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+}
+
+\smallskip
+\textbf{Lift vs.\ baseline:} +82\% NDCG@5, +92\% MRR vs.\ popularity baseline.\\
+\textbf{Cold-start analysis:} warm users NDCG@5 = 0.744, cold users NDCG@5 = \textbf{0.747} --- no degradation.
+
+\textbf{Error analysis:}
+0\% of queries produce zero NDCG@5;
+44.6\% achieve perfect ranking;
+38.6\% in the ``good'' range (0.5--1.0).
+Performance is consistent across meal times (Breakfast 0.71, Dinner 0.74,
+Late-Night 0.74) and improves with cart completeness
+(low 0.67 \TO{} high 0.76).
+
+\medskip
+\textbf{Known limitation:}
+The 44.6\% perfect-ranking rate is a known artefact of \textbf{small
+query groups} in synthetic evaluation (1 positive + 4 negatives = 5 items
+per group). With only 4 negative candidates, LambdaRank needs to place
+the single positive above just 4 alternatives --- a tractable task that
+overrepresents NDCG@5 = 1.0.
+In production with 50 FAISS candidates per query, we expect the
+perfect-ranking fraction to drop to 15--25\% and mean NDCG@5 to
+stabilise around 0.55--0.65, which remains a strong lift over baselines.
+
+\subsection{Fine-Tuning Strategy}
+
+\begin{itemize}[noitemsep, leftmargin=*]
+  \item \textbf{Online learning:} Nightly retrain on rolling 90-day window
+    using confirmed add-to-cart signals as LambdaRank labels.
+  \item \textbf{Embedding refresh:} Weekly FAISS rebuild, or triggered
+    immediately on menu changes (new item \TO{} partial graph update).
+  \item \textbf{HPO:} Optuna TPE over \{num\_leaves, lr, min\_child\_samples\},
+    NDCG@5 objective, 50 trials, 3-fold time-series CV.
+  \item \textbf{Cuisine-specific models:} Long-term: per-cuisine-cluster
+    LightGBM rankers for sharper complement pattern capture.
+\end{itemize}
+
+% =============================================================================
+\section{Business Impact \& A/B Testing Design (15\%)}
+% =============================================================================
+
+\subsection{Metric Translation --- Precision@5 \TO{} Revenue}
+
+\begin{metricbox}
+\textbf{AOV Lift Derivation} (grounded, auditable):
+
+\medskip
+{\small
+\begin{center}
+\begin{tabularx}{\linewidth}{>{\RaggedRight\arraybackslash}X r}
+  \toprule
+  Precision@5 (relevant items in top 5 shown) & 0.200 \\
+  Industry add-on acceptance rate (benchmark: 15--22\%) & 18\% \\
+  \midrule
+  Expected add-ons per session &
+    $0.200 \times 5 \times 0.18 = \mathbf{0.180}$ \\
+  Average add-on price & Rs.120 \\
+  AOV contribution per session &
+    $0.180 \times 120 = \mathbf{Rs.21.60}$ \\
+  Current baseline AOV & Rs.380 \\
+  \textbf{AOV lift} & $\mathbf{+5.68\%}$ \\
+  \midrule
+  C2O baseline & 72.0\% \\
+  C2O lift per incremental item (empirical) & +2.3 pp \\
+  New C2O & $72.0 + (0.180 \times 2.3) = \mathbf{72.41\%}$ \\
+  \midrule
+  Daily revenue lift @ 2M sessions & Rs.434 Lakh \\
+  \textbf{Annual revenue lift} & \textbf{Rs.1{,}586 Crore} \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+}
+\end{metricbox}
+
+\subsection{Rigorous A/B Testing Design}
+
+% FIX: reduced first column to 3cm and wrapped in \small to prevent overflow
+{\small
+\begin{tabularx}{\linewidth}{>{\bfseries\RaggedRight\arraybackslash}p{3cm} >{\RaggedRight\arraybackslash}X}
+  \toprule
+  Component & Design \\
+  \midrule
+  Assignment unit &
+    User-level (not session-level) to prevent contamination.
+    Bucket via $\text{MD5}(\text{user\_id}) \bmod 100$. \\[3pt]
+  Traffic split &
+    50/50 Control (popularity rail) vs.\ Treatment (CSAO LambdaRank). \\[3pt]
+  Ramp schedule &
+    Day 1--3: 5\% canary. Day 4--7: 20\%. Day 8+: 50\% if no
+    guardrail breach. \\[3pt]
+  Primary metrics &
+    (1)~CSAO Attach Rate --- fraction of sessions with $\geq$1 add-on added.
+    (2)~Average Order Value (Rs./session).
+    (3)~Revenue per Session = AOV $\times$ C2O. \\[3pt]
+  Statistical design &
+    Two-sided $t$-test ($\alpha=0.05$, power=0.80). MDE = 1\% AOV lift.
+    Required sample $\approx$130{,}000 sessions/arm ($<$2 days at 2M/day). \\[3pt]
+  Guardrail metrics &
+    Cart Abandonment Rate must not increase by $>$0.5 pp.
+    Time-to-Checkout must not increase by $>$5 s.
+    Refund Rate must not increase. \\[3pt]
+  Novelty effect &
+    Measure primary metrics separately for Days 1--7 and Days 8--21. \\
+  \bottomrule
+\end{tabularx}
+}
+
+\subsection{Guardrail --- Cart Abandonment is the Kill Switch}
+
+\[
+  \text{CAR} =
+  \frac{\text{Sessions with cart but no order}}
+       {\text{Total sessions with }\geq 1\text{ item added}}
+\]
+
+If $\text{CAR}_{\text{treatment}} - \text{CAR}_{\text{control}}
+> +0.5\,\text{pp}$ with $p < 0.01$, the experiment is auto-paused
+and the model is rolled back immediately. The recommendation system
+must \emph{never} cannibalise the core ordering funnel.
+
+% =============================================================================
+\section{Frontend Demo Application}
+% =============================================================================
+
+\subsection{Overview \& Technology Stack}
+
+\begin{execbox}[title=Demo UI Purpose]
+The frontend is a pixel-faithful Zomato-style ordering UI that demonstrates
+the CSAO recommendation engine in action. Users browse a restaurant menu,
+build a cart, and see a ``Pairs Well With'' rail of add-on recommendations
+driven by either curated mock data or the live FastAPI backend (FAISS + LightGBM).
+\end{execbox}
+
+\medskip
+{\small
+\begin{center}
+\begin{tabularx}{\linewidth}{>{\bfseries\RaggedRight\arraybackslash}p{2.2cm} >{\RaggedRight\arraybackslash}X}
+  \toprule
+  \textbf{Technology} & \textbf{Choice} \\
+  \midrule
+  Framework   & React 18 \\
+  Build       & Vite 6 \\
+  Styling     & Tailwind CSS 3 (Zomato design tokens) \\
+  HTTP        & Axios \\
+  Typography  & Inter (Google Fonts) \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+}
+
+\subsection{Application Architecture}
+
+\begin{archbox}
+\begin{lstlisting}[basicstyle=\small\ttfamily, columns=fullflexible]
+App
+|-- Header (sticky: Zomato wordmark + search pill)
+|-- CartBuilderWithSync (left 60%)
+|   |-- RestaurantHeader + Menu/Overview/Reviews tab bar
+|   |-- MenuGrid (categories, ADD/stepper, VegIndicator)
+|   |-- OverviewSection
+|   |-- ReviewsSection
++-- Sticky sidebar (right 40%, 360px)
+    |-- CartPanel (items, CompletenessBar, bill, CTA)
+    |-- RecommendationRail (5 RecommendationCards + latency badge)
+    +-- StatsPanel (collapsed: metrics, ModeToggle, AOV tracker)
+Mobile: MobileCartSheet (bottom-sheet) + inline RecommendationRail
+\end{lstlisting}
+\end{archbox}
+
+\subsection{Key Features}
+
+{\small
+\begin{center}
+\begin{tabularx}{\linewidth}{>{\bfseries\RaggedRight\arraybackslash}p{2.8cm} >{\RaggedRight\arraybackslash}X}
+  \toprule
+  \textbf{Feature} & \textbf{Description} \\
+  \midrule
+  Restaurant selector &
+    Three pills: Biryani Blues (R003), The Urban Bistro (R014), The Heritage Kitchen (R026). Switching resets cart. \\[3pt]
+  Menu / Overview / Reviews &
+    Tab bar on restaurant card; Menu shows categories (Mains, Sides, Starters, Beverages, Desserts) with FSSAI veg/non-veg dots, ADD/stepper. \\[3pt]
+  Cart \& completeness &
+    CartPanel with item list, quantity stepper, ``Meal Completeness'' progress bar, bill total, CTA ``See Recommended Add-Ons''. \\[3pt]
+  Pairs Well With rail &
+    Up to 5 recommendation cards: rank badge, item name, price, score bar, \textsuperscript{\textcircled{\scriptsize i}} why-tooltip, green ``+ Add''. Latency badge (e.g.\ ``Recommended in 4.2ms''). \\[3pt]
+  StatsPanel &
+    Collapsed by default: request counter, Session AOV Tracker (baseline Rs.380, animated delta), model table (AUC, NDCG, MRR, p99, SLA headroom, revenue lift), ModeToggle. \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+}
+
+\subsection{Dual-Mode Operation (Mock / Live API)}
+
+\begin{metricbox}
+\textbf{ModeToggle} (pill in StatsPanel): \\
+\textbf{Mock Data} --- No backend required. Curated recommendations with simulated 300--450\,ms latency; logic: if cart has a main dish, show complementary sides/beverages/desserts, else show popular fallback items. Filters out items already in cart. \\
+\textbf{Live API} --- \texttt{POST /api/recommend} to FastAPI at \texttt{localhost:8000}. Real FAISS retrieval and LightGBM ranking; response includes \texttt{retrieval\_ms}, \texttt{ranking\_ms}, \texttt{total\_ms}, \texttt{candidates\_pool}. \\
+\medskip
+\textbf{\texttt{useRecommendations}} hook: Recommendations auto-trigger with a 500\,ms debounce whenever the cart or restaurant changes (if cart non-empty). Tracks \texttt{requestCount}, \texttt{latency}, \texttt{isLoading}, \texttt{error}.
+\end{metricbox}
+
+\subsection{Design System}
+
+{\small
+\begin{center}
+\begin{tabularx}{\linewidth}{>{\ttfamily\RaggedRight\arraybackslash}p{2.8cm} >{\RaggedRight\arraybackslash}X}
+  \toprule
+  \textbf{Token} & \textbf{Value} \\
+  \midrule
+  zomato.red     & \#E23744 (brand red) \\
+  zomato.bg      & \#F5F3F1 (page background) \\
+  zomato.dark    & \#1C1C1C (primary text) \\
+  zomato.vegGreen   & \#60B246 \\
+  zomato.nonvegRed  & \#DB3A34 \\
+  border-radius.card & 16px \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+}
+\smallskip
+Custom CSS animations: \texttt{cartEnter}/\texttt{cartExit} (item add/remove), \texttt{recFadeIn} (staggered cards), \texttt{skeletonPulse}, \texttt{ctaPulse} (CTA glow), \texttt{aovDeltaAnimate} (AOV badge).
+
+\subsection{Integration Flow}
+
+When in Live mode, the frontend sends a JSON payload to \texttt{POST /api/recommend} with: \texttt{user\_id}, \texttt{restaurant\_id}, \texttt{cart\_items} (item IDs, quantities), \texttt{order\_hour}, \texttt{is\_weekend}, \texttt{slot} (Breakfast/Lunch/Tea-Time/Dinner/Late-Night), and \texttt{user\_lifetime\_orders}. The API returns ranked recommendations with \texttt{item\_id}, \texttt{item\_name}, \texttt{category}, \texttt{base\_price}, \texttt{score}, \texttt{why}, plus latency breakdown. The UI displays up to 5 cards and shows the total latency in the ``Recommended in Xms'' badge.
+
+% =============================================================================
+\section*{Appendix --- Final Artefact Inventory}
+\addcontentsline{toc}{section}{Appendix}
+% =============================================================================
+
+{\footnotesize
+\begin{center}
+\begin{tabularx}{\linewidth}{>{\ttfamily\RaggedRight\arraybackslash}X >{\RaggedRight\arraybackslash}p{4cm} >{\RaggedRight\arraybackslash}p{1.8cm}}
+  \toprule
+  \textnormal{\textbf{File}} & \textbf{Description} & \textbf{Size} \\
+  \midrule
+  data/users.csv                  & User profiles          & 500 rows \\
+  data/restaurants.csv            & Restaurant metadata    & 80 rows \\
+  data/menu\_items.csv            & Item catalogue         & 788 rows \\
+  data/historical\_orders.csv     & Order-line history     & 8.6k+ rows \\
+  data/cart\_sessions.csv         & Sequential cart events & 48k+ rows \\
+  data/item\_features.csv         & Static item features   & 788 x 28 \\
+  data/cart\_session\_features.csv& Training data (+neg)   & 240k+ x 55 \\
+  data/item\_embeddings.npy       & Semantic embeddings    & 788 x 128 \\
+  data/faiss\_item\_index.bin     & FAISS IP index         & 788 vectors \\
+  models/lgbm\_ranker.pkl         & Trained LambdaRank     & 21 trees \\
+  models/feat\_cols.json          & Feature column list    & 43 features \\
+  models/offline\_metrics.json    & Evaluation results     & --- \\
+  evaluation/error\_analysis.json & Per-query analysis     & --- \\
+  evaluation/latency\_report.json & Benchmark results      & p99=7.01ms \\
+  evaluation/baseline\_comparison.csv & vs.\ 2 baselines  & --- \\
+  evaluation/cold\_start\_analysis.csv & Warm vs.\ cold   & --- \\
+  phase5\_api\_server.py          & FastAPI server + bench & --- \\
+  \midrule
+  frontend/package.json          & csao-demo-ui v1.0.0    & --- \\
+  frontend/src/App.jsx           & Root component, layout & --- \\
+  frontend/src/hooks/useRecommendations.js & Mock + live fetch, debounce & --- \\
+  frontend/src/data/mockData.js  & Restaurants, menus, mock recs & --- \\
+  frontend/src/components/      & 14 UI components (CartPanel, RecommendationRail, \ldots) & --- \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+}
+
+\bigskip
+\begin{center}
+  \textcolor{zomato}{\rule{0.6\linewidth}{2pt}}\\[6pt]
+  {\large\bfseries\color{zomato}
+    Built for Zomato. Optimised for India. Winning by Engineering.}\\[4pt]
+  \textcolor{muted}{\small
+    All code, data, and models are fully reproducible with \texttt{SEED=42}.}
+\end{center}
+
+\end{document}
