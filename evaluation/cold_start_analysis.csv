@@ -1,0 +1,3 @@
+group,n_sessions,mrr,ndcg@5,precision@5,recall@5,ndcg@10,precision@10,recall@10
+warm_users,14419,0.6181,0.7132,0.2,1.0,0.7132,0.2,1.0
+cold_users,2927,0.6262,0.7193,0.2,1.0,0.7193,0.2,1.0

@@ -1,0 +1,81 @@
+restaurant_id,name,city,primary_cuisine,avg_rating,price_bucket,is_cold_start_restaurant,is_pure_veg
+R001,Silver Hub,Pune,North Indian,3.9,Premium,False,False
+R002,Zaika House,Jaipur,South Indian,3.5,Mid,False,False
+R003,Anand Point,Mumbai,Biryani,3.8,Mid,False,False
+R004,Punjab Bites,Surat,Beverages,4.4,Mid,False,True
+R005,Spice Express,Lucknow,Beverages,3.4,Mid,False,False
+R006,Aroma House,Indore,Chinese,3.4,Budget,False,False
+R007,Aroma Palace,Kolkata,Chinese,4.2,Budget,False,False
+R008,Swad Dhaba,Lucknow,South Indian,3.8,Premium,False,False
+R009,Zaika Hub,Jaipur,South Indian,4.4,Budget,False,False
+R010,Zaika Zone,Lucknow,Chinese,4.0,Mid,False,False
+R011,Dum Hub,Jaipur,Street Food,4.2,Premium,False,False
+R012,Silver Express,Lucknow,Street Food,3.5,Budget,False,False
+R013,Mama Bites,Surat,Biryani,4.3,Mid,False,False
+R014,Dilli Palace,Bangalore,Fast Food,3.9,Mid,False,False
+R015,Baba Hub,Surat,Biryani,4.3,Mid,False,False
+R016,Punjab Hub,Chennai,Fast Food,4.8,Budget,False,False
+R017,Aroma Restaurant,Ahmedabad,South Indian,3.9,Budget,False,False
+R018,Chennai Dhaba,Ahmedabad,North Indian,3.6,Mid,False,True
+R019,Sagar Garden,Hyderabad,Biryani,4.1,Mid,False,True
+R020,Diamond Cafe,Indore,Biryani,3.1,Mid,False,False
+R021,Dum Lounge,Surat,Fast Food,4.9,Mid,False,True
+R022,Swad Express,Surat,Desserts,5.0,Budget,False,False
+R023,Hyderabad Corner,Mumbai,South Indian,3.6,Mid,False,True
+R024,Mama Express,Mumbai,South Indian,4.9,Budget,False,True
+R025,Hotel Express,Hyderabad,Beverages,4.4,Premium,False,True
+R026,Diamond Express,Pune,Desserts,3.9,Mid,False,True
+R027,Biryani Point,Ahmedabad,Fast Food,3.6,Mid,False,False
+R028,Golden Hub,Pune,South Indian,5.0,Premium,False,False
+R029,Dum Hub,Indore,Desserts,4.7,Budget,False,False
+R030,Aroma Hub,Jaipur,Chinese,3.2,Mid,False,False
+R031,Madras Corner,Jaipur,Desserts,3.8,Budget,False,False
+R032,Aroma Junction,Delhi,Street Food,3.7,Premium,False,False
+R033,Aroma Palace,Lucknow,Beverages,3.6,Budget,False,False
+R034,Paradise Cafe,Mumbai,Chinese,4.4,Mid,False,False
+R035,Mumbai Lounge,Delhi,North Indian,,Premium,True,False
+R036,Royal Bites,Chennai,Biryani,3.0,Budget,False,False
+R037,Punjab Point,Hyderabad,Beverages,4.7,Budget,False,False
+R038,Chennai Dhaba,Hyderabad,North Indian,3.8,Mid,False,False
+R039,Hyderabad House,Jaipur,Biryani,3.0,Mid,False,False
+R040,Mumbai Bites,Surat,Street Food,4.7,Budget,False,False
+R041,Baba Bites,Ahmedabad,Desserts,4.6,Budget,False,False
+R042,Chennai Palace,Pune,South Indian,4.9,Budget,False,False
+R043,Golden Junction,Mumbai,Chinese,4.8,Premium,False,False
+R044,Anand Restaurant,Delhi,Fast Food,4.5,Mid,False,True
+R045,Baba House,Pune,Chinese,4.7,Budget,False,False
+R046,Dum Garden,Surat,Street Food,4.8,Budget,False,True
+R047,Biryani Corner,Delhi,North Indian,4.6,Budget,False,False
+R048,Zaika Lounge,Lucknow,Fast Food,3.5,Budget,False,False
+R049,Paradise Kitchen,Chennai,South Indian,,Mid,True,True
+R050,Mama Cafe,Chennai,Street Food,4.6,Budget,False,True
+R051,Paradise House,Pune,Fast Food,3.4,Budget,False,True
+R052,Diamond Restaurant,Pune,Street Food,3.4,Mid,False,False
+R053,Hyderabad Lounge,Pune,Desserts,3.5,Budget,False,False
+R054,Anand Restaurant,Delhi,Street Food,4.5,Mid,False,False
+R055,Swad Hub,Lucknow,South Indian,4.5,Mid,False,False
+R056,Dilli Corner,Bangalore,Beverages,4.4,Mid,False,False
+R057,Sagar Bites,Pune,Biryani,3.3,Mid,False,False
+R058,Chennai Zone,Ahmedabad,Fast Food,3.2,Mid,False,False
+R059,Swad Lounge,Indore,Desserts,4.3,Premium,False,False
+R060,Mumbai Lounge,Surat,South Indian,3.1,Mid,False,False
+R061,Golden Lounge,Indore,Street Food,4.6,Mid,False,True
+R062,Aroma Palace,Mumbai,Desserts,3.1,Mid,False,False
+R063,Mumbai Zone,Mumbai,South Indian,3.7,Mid,False,False
+R064,Silver Cafe,Surat,Beverages,3.3,Budget,False,False
+R065,Baba Lounge,Delhi,Desserts,4.8,Budget,False,False
+R066,Aroma House,Surat,Desserts,3.7,Budget,False,True
+R067,Sagar Kitchen,Indore,Biryani,3.8,Premium,False,True
+R068,Punjab Zone,Indore,Chinese,3.4,Mid,False,False
+R069,Golden Cafe,Pune,Fast Food,4.6,Premium,False,True
+R070,Bombay Dhaba,Jaipur,Biryani,4.8,Mid,False,False
+R071,Diamond Kitchen,Hyderabad,North Indian,3.7,Mid,False,False
+R072,Hyderabad Kitchen,Bangalore,Fast Food,4.0,Budget,False,True
+R073,Anand Bites,Indore,Biryani,3.5,Mid,False,False
+R074,Zaika Hub,Ahmedabad,Street Food,,Mid,True,True
+R075,Spice Bites,Surat,Fast Food,3.3,Premium,False,False
+R076,Bombay Cafe,Lucknow,Fast Food,4.8,Budget,False,False
+R077,Hotel House,Jaipur,South Indian,4.9,Mid,False,True
+R078,Mumbai Junction,Indore,Street Food,4.9,Mid,False,True
+R079,Shree Express,Surat,North Indian,3.6,Mid,False,False
+R080,Madras Corner,Chennai,Chinese,4.7,Mid,False,False

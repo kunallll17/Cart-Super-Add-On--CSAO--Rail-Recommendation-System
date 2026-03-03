@@ -1,0 +1,17 @@
+{
+  "n_requests": 500,
+  "concurrency_sim": 20,
+  "latency_mean_ms": 4.135,
+  "latency_median_ms": 3.784,
+  "latency_p50_ms": 3.785,
+  "latency_p95_ms": 5.032,
+  "latency_p99_ms": 12.029,
+  "latency_max_ms": 36.093,
+  "latency_min_ms": 3.356,
+  "avg_faiss_ms": 0.185,
+  "avg_lgbm_ms": 0.409,
+  "avg_feature_ms": 3.541,
+  "pct_under_50ms": 100.0,
+  "pct_under_100ms": 100.0,
+  "pct_under_200ms": 100.0
+}

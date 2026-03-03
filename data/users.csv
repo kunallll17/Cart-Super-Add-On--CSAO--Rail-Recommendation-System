@@ -1,0 +1,501 @@
+user_id,city,age,gender,is_veg_preference,preferred_cuisine,lifetime_orders,is_cold_start,join_date
+U0001,Kolkata,26,F,False,Beverages,195,False,2025-06-16
+U0002,Chennai,51,F,False,Street Food,66,False,2025-12-10
+U0003,Mumbai,35,M,True,Chinese,2,True,2026-02-06
+U0004,Chennai,32,M,False,Desserts,1,True,2026-02-21
+U0005,Lucknow,21,M,False,Desserts,199,False,2024-09-16
+U0006,Delhi,21,M,True,Biryani,136,False,2024-10-30
+U0007,Chennai,19,F,False,Desserts,127,False,2025-04-20
+U0008,Chennai,44,M,False,Beverages,163,False,2025-07-05
+U0009,Delhi,32,M,False,Fast Food,0,True,2026-02-08
+U0010,Chennai,34,M,False,North Indian,73,False,2025-08-05
+U0011,Hyderabad,18,M,False,Beverages,115,False,2023-09-19
+U0012,Mumbai,53,M,False,Fast Food,22,False,2025-11-26
+U0013,Bangalore,42,M,False,Chinese,185,False,2025-11-30
+U0014,Mumbai,23,M,False,Desserts,76,False,2025-07-23
+U0015,Indore,22,M,True,Chinese,0,True,2026-02-23
+U0016,Surat,22,M,True,Desserts,1,True,2026-02-22
+U0017,Chennai,25,F,True,North Indian,88,False,2023-04-02
+U0018,Hyderabad,30,M,False,South Indian,84,False,2025-12-07
+U0019,Kolkata,28,M,False,North Indian,141,False,2024-12-19
+U0020,Chennai,24,F,True,Street Food,23,False,2023-09-24
+U0021,Lucknow,32,M,False,Beverages,38,False,2024-11-05
+U0022,Hyderabad,21,F,True,Biryani,41,False,2023-07-26
+U0023,Delhi,24,M,False,South Indian,62,False,2024-07-10
+U0024,Hyderabad,26,M,False,North Indian,1,True,2026-02-04
+U0025,Indore,28,F,False,Fast Food,180,False,2026-01-17
+U0026,Delhi,38,M,False,South Indian,0,True,2026-02-05
+U0027,Ahmedabad,22,F,False,Beverages,183,False,2025-03-10
+U0028,Bangalore,30,M,True,Desserts,57,False,2023-09-18
+U0029,Jaipur,32,F,True,South Indian,0,True,2026-02-19
+U0030,Hyderabad,19,M,False,Desserts,109,False,2024-07-10
+U0031,Pune,32,M,False,Beverages,107,False,2025-03-18
+U0032,Lucknow,22,F,False,North Indian,87,False,2024-11-16
+U0033,Chennai,19,M,False,Beverages,141,False,2024-03-12
+U0034,Lucknow,51,M,False,South Indian,1,True,2026-02-26
+U0035,Mumbai,53,F,False,Fast Food,109,False,2025-07-25
+U0036,Jaipur,40,F,False,Chinese,18,False,2023-12-14
+U0037,Mumbai,25,M,False,South Indian,0,True,2026-02-26
+U0038,Ahmedabad,20,F,True,Beverages,110,False,2024-01-26
+U0039,Jaipur,34,F,False,Chinese,1,True,2026-02-02
+U0040,Jaipur,28,F,True,Beverages,2,True,2026-02-18
+U0041,Mumbai,20,M,False,Fast Food,181,False,2024-08-07
+U0042,Delhi,29,F,False,Beverages,0,True,2026-02-04
+U0043,Indore,18,M,True,North Indian,198,False,2025-11-03
+U0044,Mumbai,48,Other,False,Biryani,150,False,2023-07-05
+U0045,Lucknow,24,M,False,Desserts,100,False,2025-05-20
+U0046,Delhi,33,M,True,Desserts,125,False,2023-12-17
+U0047,Lucknow,25,F,True,South Indian,4,False,2025-08-22
+U0048,Indore,30,M,False,Biryani,1,True,2026-02-12
+U0049,Ahmedabad,30,Other,False,Beverages,79,False,2024-06-09
+U0050,Chennai,22,F,False,Fast Food,195,False,2024-01-21
+U0051,Indore,53,F,False,South Indian,1,True,2026-02-11
+U0052,Surat,37,M,False,Beverages,110,False,2025-01-02
+U0053,Kolkata,50,F,False,Chinese,2,True,2026-02-07
+U0054,Delhi,47,M,False,Street Food,194,False,2025-09-10
+U0055,Ahmedabad,32,M,False,Beverages,191,False,2025-10-29
+U0056,Surat,49,F,False,Biryani,142,False,2024-10-21
+U0057,Pune,20,M,True,South Indian,157,False,2024-06-17
+U0058,Ahmedabad,22,M,True,Biryani,59,False,2025-08-20
+U0059,Mumbai,19,F,False,South Indian,127,False,2024-10-11
+U0060,Mumbai,25,M,False,Beverages,59,False,2025-07-08
+U0061,Indore,27,M,False,North Indian,1,True,2026-02-17
+U0062,Kolkata,24,F,True,Chinese,114,False,2024-07-10
+U0063,Ahmedabad,41,M,True,Beverages,127,False,2023-07-17
+U0064,Bangalore,26,F,True,Desserts,10,False,2024-01-14
+U0065,Chennai,24,Other,True,Biryani,102,False,2025-03-03
+U0066,Indore,30,F,False,Street Food,89,False,2024-01-03
+U0067,Mumbai,21,F,True,Street Food,174,False,2024-02-03
+U0068,Kolkata,39,M,False,Fast Food,176,False,2024-11-27
+U0069,Chennai,19,M,False,South Indian,1,True,2026-02-08
+U0070,Ahmedabad,54,F,True,Biryani,2,True,2026-02-21
+U0071,Ahmedabad,37,F,False,Fast Food,45,False,2025-09-06
+U0072,Jaipur,22,M,False,Biryani,122,False,2025-02-14
+U0073,Kolkata,18,M,True,Desserts,35,False,2024-09-16
+U0074,Surat,40,M,False,South Indian,162,False,2025-03-02
+U0075,Mumbai,34,M,False,Beverages,139,False,2023-06-29
+U0076,Bangalore,35,F,False,Beverages,9,False,2023-12-15
+U0077,Ahmedabad,37,M,True,Street Food,103,False,2024-07-27
+U0078,Bangalore,19,F,False,Beverages,154,False,2024-11-07
+U0079,Ahmedabad,26,F,False,Beverages,147,False,2024-04-06
+U0080,Mumbai,20,M,True,Desserts,172,False,2025-10-08
+U0081,Chennai,44,F,False,North Indian,9,False,2024-10-18
+U0082,Hyderabad,32,M,False,Street Food,24,False,2025-11-26
+U0083,Chennai,25,F,False,Fast Food,167,False,2024-04-24
+U0084,Ahmedabad,19,F,True,Chinese,112,False,2023-11-01
+U0085,Lucknow,25,F,False,North Indian,37,False,2024-07-31
+U0086,Hyderabad,25,F,True,Fast Food,121,False,2025-09-17
+U0087,Surat,35,M,True,South Indian,49,False,2024-11-24
+U0088,Hyderabad,33,M,True,North Indian,15,False,2024-04-26
+U0089,Bangalore,46,F,True,Desserts,1,True,2026-02-23
+U0090,Kolkata,29,M,True,Fast Food,1,True,2026-02-09
+U0091,Bangalore,20,M,True,South Indian,86,False,2023-04-14
+U0092,Indore,34,M,False,Street Food,57,False,2023-11-12
+U0093,Bangalore,36,F,True,Chinese,119,False,2023-07-06
+U0094,Surat,31,M,True,South Indian,86,False,2025-04-13
+U0095,Lucknow,36,F,False,Beverages,89,False,2024-08-06
+U0096,Chennai,29,Other,False,Biryani,197,False,2025-04-20
+U0097,Chennai,30,M,False,South Indian,100,False,2024-09-12
+U0098,Pune,28,M,True,South Indian,74,False,2024-08-10
+U0099,Ahmedabad,18,M,True,Chinese,195,False,2023-09-06
+U0100,Lucknow,20,F,True,Biryani,1,True,2026-02-01
+U0101,Pune,18,M,True,Beverages,67,False,2023-11-05
+U0102,Indore,33,M,True,Fast Food,23,False,2024-01-20
+U0103,Mumbai,25,M,True,Fast Food,123,False,2024-11-07
+U0104,Ahmedabad,30,F,True,South Indian,7,False,2025-04-22
+U0105,Ahmedabad,48,M,True,Desserts,194,False,2023-03-24
+U0106,Jaipur,23,F,False,Desserts,141,False,2023-04-26
+U0107,Jaipur,27,F,True,Biryani,16,False,2025-07-28
+U0108,Delhi,35,M,True,Biryani,92,False,2025-10-26
+U0109,Delhi,23,F,False,Beverages,60,False,2025-06-20
+U0110,Bangalore,19,M,False,Chinese,169,False,2025-03-23
+U0111,Mumbai,24,F,True,Street Food,20,False,2025-03-09
+U0112,Hyderabad,21,F,False,Fast Food,169,False,2023-09-19
+U0113,Hyderabad,50,F,False,Chinese,13,False,2025-09-22
+U0114,Jaipur,40,M,True,North Indian,196,False,2023-12-04
+U0115,Jaipur,33,M,False,Fast Food,10,False,2023-12-11
+U0116,Jaipur,45,M,False,Chinese,0,True,2026-02-10
+U0117,Lucknow,39,M,True,Fast Food,54,False,2023-06-17
+U0118,Kolkata,22,M,True,Street Food,8,False,2024-09-03
+U0119,Delhi,47,M,False,North Indian,162,False,2026-01-07
+U0120,Lucknow,30,M,False,Desserts,42,False,2025-06-10
+U0121,Chennai,40,M,True,Desserts,64,False,2024-08-02
+U0122,Hyderabad,47,F,True,Street Food,35,False,2024-03-05
+U0123,Indore,25,M,True,Beverages,124,False,2025-06-16
+U0124,Surat,20,M,False,North Indian,174,False,2024-06-08
+U0125,Ahmedabad,23,M,False,South Indian,32,False,2023-08-24
+U0126,Delhi,28,M,True,Chinese,147,False,2025-03-13
+U0127,Pune,40,F,False,North Indian,58,False,2023-07-16
+U0128,Chennai,44,M,False,Beverages,122,False,2026-01-24
+U0129,Indore,18,F,True,Beverages,182,False,2024-08-09
+U0130,Delhi,30,F,True,Street Food,68,False,2023-04-11
+U0131,Surat,27,F,False,Fast Food,199,False,2025-01-30
+U0132,Lucknow,23,F,False,North Indian,97,False,2023-03-28
+U0133,Mumbai,20,F,False,Chinese,45,False,2025-06-27
+U0134,Ahmedabad,26,Other,False,North Indian,158,False,2024-05-29
+U0135,Delhi,51,F,True,Biryani,158,False,2023-03-28
+U0136,Kolkata,25,F,False,Fast Food,194,False,2024-12-19
+U0137,Jaipur,30,F,False,Chinese,186,False,2025-03-23
+U0138,Jaipur,34,M,True,Desserts,0,True,2026-02-18
+U0139,Ahmedabad,26,F,True,Chinese,44,False,2025-03-06
+U0140,Surat,53,M,True,South Indian,82,False,2026-01-29
+U0141,Indore,52,M,True,Street Food,30,False,2024-04-07
+U0142,Lucknow,23,M,True,South Indian,2,True,2026-02-14
+U0143,Jaipur,29,M,True,Chinese,9,False,2025-12-22
+U0144,Delhi,25,M,True,Fast Food,82,False,2025-06-15
+U0145,Pune,24,M,True,North Indian,150,False,2024-01-18
+U0146,Hyderabad,18,F,False,Desserts,176,False,2024-05-11
+U0147,Hyderabad,32,M,False,North Indian,99,False,2024-09-27
+U0148,Chennai,29,F,False,Fast Food,104,False,2025-10-04
+U0149,Indore,19,M,False,Chinese,186,False,2024-09-24
+U0150,Bangalore,24,M,False,Beverages,53,False,2025-08-22
+U0151,Mumbai,48,F,True,North Indian,22,False,2025-08-08
+U0152,Ahmedabad,23,F,False,Beverages,154,False,2023-05-11
+U0153,Chennai,21,M,False,North Indian,2,True,2026-02-03
+U0154,Bangalore,29,F,False,North Indian,163,False,2025-09-11
+U0155,Lucknow,54,F,False,Desserts,65,False,2025-05-18
+U0156,Kolkata,23,M,True,Street Food,29,False,2025-05-13
+U0157,Kolkata,33,M,True,Street Food,181,False,2023-06-02
+U0158,Mumbai,36,Other,True,Biryani,200,False,2025-02-26
+U0159,Indore,23,F,False,South Indian,80,False,2024-08-06
+U0160,Jaipur,35,M,False,Fast Food,178,False,2023-09-17
+U0161,Delhi,26,F,True,Fast Food,156,False,2024-11-23
+U0162,Chennai,32,M,False,Fast Food,0,True,2026-01-31
+U0163,Chennai,33,M,False,Biryani,147,False,2024-12-15
+U0164,Ahmedabad,30,M,True,Street Food,0,True,2026-02-07
+U0165,Ahmedabad,20,F,True,Chinese,91,False,2024-05-02
+U0166,Kolkata,42,F,True,Beverages,139,False,2023-11-05
+U0167,Kolkata,25,F,True,Desserts,1,True,2026-02-08
+U0168,Indore,22,M,True,Beverages,2,True,2026-02-09
+U0169,Surat,18,M,True,Chinese,97,False,2023-12-28
+U0170,Pune,32,M,True,Desserts,20,False,2023-08-17
+U0171,Pune,34,F,True,Biryani,132,False,2023-03-08
+U0172,Surat,18,M,False,Chinese,168,False,2023-07-21
+U0173,Jaipur,30,M,True,Fast Food,1,True,2026-02-26
+U0174,Pune,23,F,False,South Indian,0,True,2026-02-22
+U0175,Indore,33,M,False,North Indian,110,False,2024-10-27
+U0176,Delhi,22,F,False,Beverages,128,False,2025-09-21
+U0177,Delhi,34,M,True,Street Food,0,True,2026-02-19
+U0178,Chennai,27,F,True,Street Food,113,False,2025-12-18
+U0179,Hyderabad,50,M,False,Biryani,95,False,2024-10-16
+U0180,Surat,21,F,False,Desserts,165,False,2024-11-05
+U0181,Delhi,26,M,False,Street Food,120,False,2026-01-16
+U0182,Bangalore,20,M,True,Fast Food,184,False,2025-09-07
+U0183,Kolkata,49,M,True,Beverages,42,False,2025-10-02
+U0184,Ahmedabad,45,M,False,Chinese,114,False,2024-10-19
+U0185,Indore,24,M,False,Fast Food,0,True,2026-02-27
+U0186,Pune,33,F,False,Biryani,2,True,2026-02-01
+U0187,Surat,40,M,False,Fast Food,136,False,2025-11-27
+U0188,Chennai,31,F,True,Chinese,169,False,2024-03-25
+U0189,Mumbai,30,F,False,South Indian,72,False,2025-09-07
+U0190,Ahmedabad,23,F,True,Biryani,160,False,2023-03-15
+U0191,Bangalore,20,M,True,South Indian,140,False,2024-09-30
+U0192,Pune,47,M,False,North Indian,1,True,2026-02-21
+U0193,Bangalore,47,F,False,South Indian,122,False,2023-05-12
+U0194,Kolkata,33,F,True,North Indian,114,False,2024-11-18
+U0195,Kolkata,26,M,True,North Indian,190,False,2025-05-05
+U0196,Indore,26,M,False,South Indian,154,False,2023-06-07
+U0197,Jaipur,35,M,True,Biryani,71,False,2024-09-20
+U0198,Chennai,47,Other,False,Desserts,85,False,2023-06-07
+U0199,Ahmedabad,46,M,True,Chinese,65,False,2023-10-20
+U0200,Lucknow,37,M,False,Fast Food,25,False,2025-01-06
+U0201,Lucknow,33,F,False,Fast Food,74,False,2025-07-21
+U0202,Ahmedabad,19,M,True,Chinese,118,False,2025-07-16
+U0203,Mumbai,21,M,True,Beverages,65,False,2023-09-01
+U0204,Indore,47,F,True,Beverages,195,False,2024-02-05
+U0205,Chennai,32,F,True,North Indian,1,True,2026-02-16
+U0206,Bangalore,18,M,False,North Indian,148,False,2023-10-12
+U0207,Mumbai,20,M,True,Biryani,159,False,2023-06-19
+U0208,Hyderabad,33,M,False,Street Food,174,False,2025-10-12
+U0209,Ahmedabad,18,M,True,South Indian,100,False,2025-07-13
+U0210,Bangalore,21,F,False,North Indian,89,False,2025-09-28
+U0211,Lucknow,31,M,False,Fast Food,10,False,2023-10-29
+U0212,Delhi,34,M,False,Biryani,129,False,2024-03-07
+U0213,Surat,33,M,False,South Indian,1,True,2026-02-04
+U0214,Jaipur,23,F,False,Biryani,49,False,2025-06-21
+U0215,Lucknow,34,M,True,South Indian,127,False,2024-09-08
+U0216,Chennai,23,F,False,South Indian,0,True,2026-02-23
+U0217,Kolkata,25,M,False,Chinese,93,False,2025-01-06
+U0218,Surat,35,F,False,North Indian,69,False,2023-07-27
+U0219,Surat,33,F,True,Desserts,90,False,2025-04-18
+U0220,Delhi,43,M,False,Biryani,74,False,2023-09-19
+U0221,Jaipur,33,M,False,Desserts,155,False,2025-01-20
+U0222,Jaipur,31,M,True,Biryani,182,False,2024-07-09
+U0223,Hyderabad,20,M,True,Chinese,73,False,2023-06-28
+U0224,Hyderabad,26,M,False,Fast Food,145,False,2024-09-06
+U0225,Pune,24,M,False,Desserts,5,False,2025-08-29
+U0226,Lucknow,23,M,False,Fast Food,135,False,2023-08-07
+U0227,Lucknow,53,F,True,Beverages,51,False,2025-07-14
+U0228,Lucknow,27,M,False,North Indian,24,False,2025-10-19
+U0229,Pune,47,F,True,North Indian,64,False,2025-12-31
+U0230,Indore,32,M,True,Street Food,187,False,2025-07-23
+U0231,Mumbai,38,F,True,Chinese,107,False,2024-10-03
+U0232,Jaipur,29,F,False,Fast Food,1,True,2026-02-24
+U0233,Delhi,31,M,False,South Indian,145,False,2023-10-21
+U0234,Chennai,29,F,False,Biryani,0,True,2026-02-14
+U0235,Jaipur,22,M,True,North Indian,179,False,2023-05-21
+U0236,Hyderabad,35,M,False,Desserts,124,False,2024-11-19
+U0237,Surat,24,F,True,Biryani,168,False,2023-11-01
+U0238,Bangalore,18,M,False,Biryani,185,False,2025-10-02
+U0239,Kolkata,33,M,False,Street Food,128,False,2025-02-27
+U0240,Pune,22,F,True,Fast Food,117,False,2023-12-16
+U0241,Ahmedabad,51,F,False,North Indian,7,False,2026-01-26
+U0242,Bangalore,52,F,True,Biryani,26,False,2023-11-23
+U0243,Chennai,48,M,False,North Indian,78,False,2024-08-05
+U0244,Lucknow,26,F,False,South Indian,0,True,2026-01-31
+U0245,Hyderabad,18,M,True,Street Food,106,False,2023-07-14
+U0246,Hyderabad,50,F,False,South Indian,180,False,2024-06-25
+U0247,Hyderabad,28,F,True,North Indian,65,False,2023-09-17
+U0248,Lucknow,53,F,False,Beverages,81,False,2023-05-10
+U0249,Ahmedabad,52,F,False,Desserts,172,False,2025-03-19
+U0250,Pune,43,M,False,North Indian,151,False,2025-01-07
+U0251,Bangalore,24,F,True,Fast Food,97,False,2024-06-02
+U0252,Lucknow,27,F,False,Biryani,124,False,2024-11-11
+U0253,Chennai,43,M,False,Biryani,2,True,2026-02-28
+U0254,Pune,25,F,True,South Indian,138,False,2025-09-28
+U0255,Chennai,22,M,True,Desserts,91,False,2024-04-28
+U0256,Pune,31,F,False,Street Food,111,False,2025-10-05
+U0257,Ahmedabad,50,F,False,Beverages,193,False,2025-10-20
+U0258,Kolkata,34,F,False,Chinese,143,False,2023-05-30
+U0259,Chennai,31,M,False,Desserts,87,False,2023-04-07
+U0260,Lucknow,20,F,False,Biryani,93,False,2025-03-14
+U0261,Pune,32,M,True,Fast Food,182,False,2025-10-06
+U0262,Hyderabad,55,F,True,Desserts,119,False,2023-03-27
+U0263,Indore,21,M,True,South Indian,72,False,2025-08-19
+U0264,Jaipur,30,M,False,South Indian,1,True,2026-02-02
+U0265,Hyderabad,45,F,True,Chinese,67,False,2025-01-15
+U0266,Mumbai,35,M,False,Fast Food,0,True,2026-02-27
+U0267,Kolkata,34,F,False,Street Food,33,False,2025-09-13
+U0268,Kolkata,34,F,False,Desserts,187,False,2024-10-06
+U0269,Hyderabad,26,F,True,Fast Food,52,False,2023-10-27
+U0270,Bangalore,24,F,False,Street Food,83,False,2025-05-30
+U0271,Ahmedabad,40,M,True,Fast Food,0,True,2026-02-01
+U0272,Chennai,40,M,False,Fast Food,193,False,2024-09-13
+U0273,Lucknow,44,M,True,North Indian,140,False,2025-11-10
+U0274,Kolkata,48,M,True,South Indian,2,True,2026-02-10
+U0275,Hyderabad,30,M,False,Desserts,50,False,2025-08-16
+U0276,Hyderabad,29,F,True,Fast Food,52,False,2023-09-25
+U0277,Ahmedabad,39,F,True,Desserts,58,False,2024-04-23
+U0278,Ahmedabad,33,M,False,Chinese,192,False,2024-08-14
+U0279,Delhi,34,F,False,Fast Food,126,False,2024-12-08
+U0280,Delhi,39,Other,False,Biryani,73,False,2024-04-27
+U0281,Bangalore,46,F,False,South Indian,188,False,2024-09-29
+U0282,Indore,26,F,False,Biryani,153,False,2024-08-05
+U0283,Indore,26,M,True,Desserts,197,False,2023-11-12
+U0284,Bangalore,20,M,True,Desserts,137,False,2025-05-07
+U0285,Mumbai,31,M,True,South Indian,155,False,2024-05-26
+U0286,Bangalore,18,M,False,Desserts,1,True,2026-02-15
+U0287,Pune,29,F,False,Biryani,28,False,2024-04-23
+U0288,Ahmedabad,30,F,False,Fast Food,52,False,2025-09-04
+U0289,Indore,24,M,False,Fast Food,78,False,2026-01-11
+U0290,Lucknow,32,M,False,North Indian,61,False,2023-07-07
+U0291,Pune,18,F,True,Chinese,95,False,2025-07-10
+U0292,Chennai,18,M,False,Desserts,0,True,2026-02-27
+U0293,Hyderabad,41,M,False,Biryani,80,False,2024-11-20
+U0294,Bangalore,26,F,False,Desserts,6,False,2023-03-31
+U0295,Hyderabad,21,M,True,Desserts,184,False,2024-08-05
+U0296,Kolkata,30,M,False,Street Food,139,False,2025-05-04
+U0297,Mumbai,36,M,False,North Indian,35,False,2024-02-16
+U0298,Kolkata,23,F,False,Biryani,73,False,2025-09-12
+U0299,Mumbai,32,F,False,Biryani,0,True,2026-02-01
+U0300,Delhi,20,M,False,Desserts,16,False,2024-09-17
+U0301,Hyderabad,19,M,False,North Indian,144,False,2024-01-05
+U0302,Mumbai,30,M,True,Fast Food,77,False,2024-06-26
+U0303,Surat,30,F,False,Biryani,181,False,2025-03-13
+U0304,Indore,33,F,False,Fast Food,35,False,2023-08-17
+U0305,Surat,35,M,False,North Indian,166,False,2024-05-21
+U0306,Surat,53,F,False,Fast Food,195,False,2026-01-14
+U0307,Jaipur,30,M,False,South Indian,128,False,2024-05-27
+U0308,Indore,25,M,False,Street Food,29,False,2025-07-02
+U0309,Pune,39,M,False,Beverages,6,False,2025-04-30
+U0310,Mumbai,24,M,True,Biryani,149,False,2024-08-07
+U0311,Mumbai,28,M,False,Chinese,75,False,2025-06-08
+U0312,Pune,19,M,False,Street Food,123,False,2025-06-25
+U0313,Hyderabad,18,M,True,Beverages,125,False,2025-03-18
+U0314,Hyderabad,52,F,False,Fast Food,115,False,2024-07-22
+U0315,Surat,42,M,False,Biryani,90,False,2024-07-02
+U0316,Pune,34,F,False,Fast Food,50,False,2024-11-25
+U0317,Indore,27,F,False,South Indian,16,False,2024-02-28
+U0318,Surat,22,M,True,North Indian,1,True,2026-02-23
+U0319,Kolkata,21,M,True,Biryani,125,False,2024-08-08
+U0320,Jaipur,23,M,True,Beverages,32,False,2023-04-01
+U0321,Lucknow,31,M,False,Beverages,19,False,2023-05-06
+U0322,Chennai,34,M,True,South Indian,105,False,2024-09-03
+U0323,Jaipur,33,F,True,South Indian,128,False,2025-10-18
+U0324,Hyderabad,24,F,True,Desserts,21,False,2025-07-25
+U0325,Lucknow,52,M,False,Biryani,150,False,2023-09-16
+U0326,Delhi,35,F,False,Fast Food,2,True,2026-02-03
+U0327,Bangalore,31,M,True,Chinese,2,True,2026-02-21
+U0328,Surat,32,F,True,Beverages,16,False,2025-11-01
+U0329,Mumbai,27,F,False,Beverages,41,False,2026-01-23
+U0330,Pune,23,F,False,South Indian,41,False,2024-03-18
+U0331,Pune,26,M,True,Street Food,147,False,2025-05-08
+U0332,Mumbai,35,M,False,South Indian,80,False,2024-08-12
+U0333,Surat,18,F,True,Chinese,24,False,2025-03-06
+U0334,Bangalore,20,M,True,Fast Food,66,False,2023-08-10
+U0335,Chennai,19,F,False,Fast Food,33,False,2023-09-08
+U0336,Bangalore,18,M,False,Street Food,2,True,2026-02-12
+U0337,Lucknow,44,M,False,Beverages,198,False,2026-01-11
+U0338,Bangalore,34,M,True,South Indian,109,False,2025-06-15
+U0339,Lucknow,29,M,False,Desserts,158,False,2025-08-29
+U0340,Bangalore,20,F,False,Fast Food,155,False,2025-03-31
+U0341,Chennai,29,M,True,Chinese,161,False,2025-11-18
+U0342,Chennai,29,M,False,Biryani,60,False,2024-01-05
+U0343,Hyderabad,22,M,True,North Indian,2,True,2026-02-11
+U0344,Mumbai,28,M,False,North Indian,1,True,2026-02-12
+U0345,Chennai,27,M,True,North Indian,118,False,2025-04-02
+U0346,Lucknow,32,M,False,Desserts,116,False,2023-09-03
+U0347,Chennai,33,F,True,Beverages,79,False,2025-05-14
+U0348,Hyderabad,19,M,False,South Indian,2,True,2026-02-28
+U0349,Pune,26,M,False,Street Food,1,True,2026-02-20
+U0350,Lucknow,32,M,False,Desserts,81,False,2024-01-15
+U0351,Hyderabad,29,M,True,Desserts,148,False,2025-11-10
+U0352,Kolkata,44,Other,False,Fast Food,161,False,2024-01-29
+U0353,Kolkata,33,M,True,Biryani,18,False,2024-11-26
+U0354,Delhi,21,M,False,Desserts,159,False,2024-09-06
+U0355,Bangalore,19,F,True,Chinese,2,True,2026-02-08
+U0356,Mumbai,33,M,True,Biryani,28,False,2025-07-04
+U0357,Ahmedabad,18,M,True,Chinese,0,True,2026-02-18
+U0358,Jaipur,31,F,False,Beverages,163,False,2023-10-21
+U0359,Hyderabad,51,F,False,South Indian,57,False,2025-03-20
+U0360,Pune,31,Other,True,North Indian,70,False,2024-10-03
+U0361,Jaipur,27,M,False,Desserts,172,False,2025-03-04
+U0362,Pune,33,M,False,South Indian,23,False,2025-02-02
+U0363,Indore,28,M,False,Beverages,43,False,2023-10-09
+U0364,Indore,30,M,False,Street Food,64,False,2025-12-11
+U0365,Indore,51,F,False,Street Food,47,False,2025-01-28
+U0366,Jaipur,27,M,False,Beverages,144,False,2024-03-21
+U0367,Hyderabad,52,F,True,Chinese,22,False,2023-10-10
+U0368,Ahmedabad,48,F,True,Fast Food,43,False,2024-09-09
+U0369,Jaipur,22,M,False,Fast Food,3,False,2024-08-02
+U0370,Hyderabad,19,M,False,Chinese,107,False,2025-03-10
+U0371,Chennai,20,F,True,Street Food,118,False,2025-06-23
+U0372,Ahmedabad,18,M,True,Street Food,2,True,2026-02-17
+U0373,Indore,20,F,False,Desserts,155,False,2025-11-12
+U0374,Lucknow,34,M,False,Street Food,123,False,2023-06-12
+U0375,Pune,19,M,True,South Indian,77,False,2024-11-01
+U0376,Indore,25,F,True,Street Food,11,False,2024-12-18
+U0377,Kolkata,43,Other,False,Biryani,62,False,2023-07-03
+U0378,Bangalore,18,M,False,Desserts,76,False,2024-02-14
+U0379,Kolkata,40,F,True,North Indian,2,True,2026-02-20
+U0380,Indore,24,M,True,Street Food,75,False,2024-10-21
+U0381,Ahmedabad,20,F,True,Chinese,182,False,2024-10-31
+U0382,Lucknow,34,F,False,North Indian,119,False,2025-12-13
+U0383,Pune,32,M,True,South Indian,21,False,2024-12-31
+U0384,Lucknow,45,M,True,Chinese,178,False,2023-11-06
+U0385,Jaipur,35,F,False,North Indian,62,False,2024-03-29
+U0386,Pune,39,M,True,Chinese,70,False,2024-07-09
+U0387,Indore,24,F,False,South Indian,163,False,2025-09-10
+U0388,Jaipur,22,M,True,Desserts,153,False,2024-07-08
+U0389,Hyderabad,35,F,True,Biryani,172,False,2024-02-11
+U0390,Ahmedabad,39,F,True,South Indian,53,False,2023-03-24
+U0391,Surat,55,F,False,South Indian,111,False,2023-11-04
+U0392,Hyderabad,27,M,False,Chinese,32,False,2024-03-23
+U0393,Delhi,26,F,False,Desserts,142,False,2025-12-05
+U0394,Lucknow,37,F,True,Beverages,60,False,2025-06-08
+U0395,Surat,26,M,False,Fast Food,2,True,2026-02-01
+U0396,Jaipur,50,M,True,Street Food,41,False,2024-08-14
+U0397,Chennai,44,M,True,Street Food,1,True,2026-02-24
+U0398,Hyderabad,28,F,False,Biryani,39,False,2024-08-05
+U0399,Delhi,35,M,True,Biryani,21,False,2025-11-13
+U0400,Mumbai,35,M,True,Street Food,18,False,2025-06-22
+U0401,Surat,20,F,True,Fast Food,0,True,2026-02-10
+U0402,Kolkata,47,M,True,Street Food,81,False,2023-08-25
+U0403,Pune,29,M,True,Beverages,155,False,2024-02-23
+U0404,Delhi,41,F,False,Fast Food,194,False,2024-04-28
+U0405,Ahmedabad,25,F,False,Biryani,2,True,2026-02-16
+U0406,Surat,47,M,False,North Indian,76,False,2023-03-20
+U0407,Hyderabad,27,M,False,Chinese,115,False,2025-06-08
+U0408,Ahmedabad,18,F,True,Beverages,34,False,2023-12-04
+U0409,Kolkata,48,M,True,Beverages,122,False,2025-01-06
+U0410,Chennai,20,M,True,Desserts,179,False,2024-08-27
+U0411,Lucknow,25,M,False,Biryani,80,False,2025-11-01
+U0412,Lucknow,51,M,True,Biryani,182,False,2023-08-21
+U0413,Indore,51,F,False,South Indian,106,False,2026-01-27
+U0414,Ahmedabad,31,M,False,Beverages,72,False,2023-03-03
+U0415,Jaipur,32,F,False,South Indian,131,False,2024-12-23
+U0416,Chennai,28,F,False,South Indian,141,False,2024-01-16
+U0417,Lucknow,24,M,True,Chinese,129,False,2023-08-31
+U0418,Chennai,25,F,False,South Indian,115,False,2025-09-09
+U0419,Delhi,33,F,False,Fast Food,0,True,2026-02-08
+U0420,Chennai,35,M,True,Street Food,156,False,2024-03-25
+U0421,Bangalore,38,M,False,North Indian,13,False,2024-04-28
+U0422,Kolkata,38,F,False,Biryani,113,False,2025-05-20
+U0423,Lucknow,20,F,False,Fast Food,191,False,2024-05-25
+U0424,Chennai,29,F,False,North Indian,85,False,2023-03-29
+U0425,Ahmedabad,19,M,False,Beverages,157,False,2024-05-07
+U0426,Mumbai,31,Other,True,Beverages,67,False,2023-10-17
+U0427,Bangalore,28,M,True,Beverages,0,True,2026-02-19
+U0428,Bangalore,46,M,False,Fast Food,26,False,2023-10-29
+U0429,Jaipur,26,F,False,Fast Food,61,False,2024-06-04
+U0430,Chennai,20,M,True,Biryani,175,False,2025-05-15
+U0431,Indore,21,M,True,Street Food,150,False,2025-01-03
+U0432,Jaipur,36,M,False,Desserts,153,False,2023-09-22
+U0433,Jaipur,32,M,False,South Indian,8,False,2023-12-16
+U0434,Mumbai,20,M,False,Beverages,198,False,2025-02-08
+U0435,Delhi,19,F,True,Chinese,2,True,2026-02-10
+U0436,Chennai,34,M,True,Street Food,71,False,2024-05-24
+U0437,Hyderabad,19,F,True,Chinese,150,False,2023-10-22
+U0438,Lucknow,41,F,False,Biryani,13,False,2026-01-30
+U0439,Jaipur,34,F,True,Biryani,198,False,2024-05-18
+U0440,Kolkata,19,M,False,Biryani,196,False,2024-06-22
+U0441,Pune,20,F,True,North Indian,47,False,2024-11-26
+U0442,Kolkata,54,M,False,Chinese,123,False,2023-09-03
+U0443,Mumbai,26,F,False,Street Food,135,False,2024-04-11
+U0444,Mumbai,26,F,False,Desserts,2,True,2026-02-15
+U0445,Ahmedabad,40,F,True,Street Food,116,False,2023-08-10
+U0446,Delhi,51,M,True,Fast Food,1,True,2026-02-15
+U0447,Indore,54,F,True,Fast Food,0,True,2026-02-08
+U0448,Lucknow,35,M,False,Beverages,2,True,2026-02-23
+U0449,Surat,26,F,False,Desserts,114,False,2023-03-21
+U0450,Jaipur,19,Other,False,Fast Food,165,False,2023-06-06
+U0451,Kolkata,37,M,False,Biryani,128,False,2025-02-17
+U0452,Pune,31,Other,False,Street Food,26,False,2025-08-10
+U0453,Mumbai,28,M,True,Chinese,123,False,2024-06-28
+U0454,Mumbai,48,M,False,Biryani,92,False,2023-03-12
+U0455,Delhi,20,M,False,North Indian,107,False,2024-03-15
+U0456,Pune,29,M,True,Fast Food,1,True,2026-02-27
+U0457,Pune,18,F,False,Biryani,85,False,2024-10-06
+U0458,Delhi,29,M,True,Biryani,174,False,2024-05-05
+U0459,Mumbai,19,M,True,North Indian,29,False,2024-10-27
+U0460,Lucknow,20,F,False,South Indian,44,False,2024-12-19
+U0461,Chennai,20,F,True,Street Food,87,False,2025-04-04
+U0462,Chennai,33,F,False,Chinese,1,True,2026-03-01
+U0463,Delhi,35,F,True,Beverages,180,False,2025-10-28
+U0464,Pune,31,F,True,South Indian,129,False,2024-09-16
+U0465,Jaipur,52,M,True,Fast Food,1,True,2026-02-14
+U0466,Delhi,26,M,True,Biryani,172,False,2025-09-03
+U0467,Lucknow,24,F,False,Desserts,1,True,2026-02-15
+U0468,Delhi,45,M,True,North Indian,197,False,2023-10-05
+U0469,Bangalore,23,F,False,North Indian,143,False,2024-12-28
+U0470,Kolkata,52,M,False,Desserts,12,False,2023-12-06
+U0471,Pune,18,M,False,Street Food,1,True,2026-02-14
+U0472,Indore,53,M,False,South Indian,0,True,2026-02-17
+U0473,Ahmedabad,19,F,False,Beverages,83,False,2024-09-18
+U0474,Ahmedabad,46,F,True,Street Food,1,True,2026-02-25
+U0475,Pune,30,F,True,Desserts,85,False,2026-01-19
+U0476,Indore,55,M,True,Biryani,0,True,2026-02-01
+U0477,Surat,19,M,False,Desserts,200,False,2025-06-26
+U0478,Lucknow,31,F,True,Street Food,106,False,2023-09-13
+U0479,Bangalore,53,F,False,Chinese,134,False,2024-11-08
+U0480,Bangalore,30,M,False,North Indian,3,False,2025-02-04
+U0481,Mumbai,32,F,True,North Indian,171,False,2023-03-07
+U0482,Kolkata,34,M,False,Fast Food,141,False,2023-06-24
+U0483,Chennai,28,M,True,Fast Food,121,False,2025-10-20
+U0484,Hyderabad,32,M,True,Desserts,108,False,2024-09-07
+U0485,Lucknow,31,F,False,Beverages,0,True,2026-01-31
+U0486,Hyderabad,47,F,False,Biryani,51,False,2025-05-27
+U0487,Hyderabad,19,M,False,Chinese,135,False,2023-07-11
+U0488,Pune,24,F,False,South Indian,95,False,2025-05-02
+U0489,Ahmedabad,51,M,True,Street Food,162,False,2023-06-24
+U0490,Ahmedabad,46,M,False,Beverages,196,False,2024-04-21
+U0491,Chennai,28,M,False,Biryani,130,False,2023-08-08
+U0492,Pune,32,M,False,Fast Food,163,False,2023-04-03
+U0493,Hyderabad,24,M,True,Desserts,116,False,2023-09-10
+U0494,Indore,22,F,False,Street Food,0,True,2026-02-03
+U0495,Surat,28,F,True,Fast Food,55,False,2023-08-01
+U0496,Jaipur,26,M,True,Desserts,71,False,2025-03-11
+U0497,Ahmedabad,31,M,False,Street Food,2,True,2026-02-06
+U0498,Lucknow,19,M,True,South Indian,36,False,2023-06-03
+U0499,Indore,53,M,False,Biryani,76,False,2023-07-24
+U0500,Lucknow,54,M,False,Street Food,1,True,2026-02-21

@@ -1,0 +1,789 @@
+item_id,restaurant_id,item_name,cuisine,category,is_veg,base_price,popularity_score,is_available
+I00001,R001,Matar Paneer,North Indian,mains,True,280.0,0.443,True
+I00002,R001,Dum Aloo,North Indian,mains,True,560.0,0.123,True
+I00003,R001,Butter Chicken,North Indian,mains,False,170.0,0.35,True
+I00004,R001,ABC Juice,Beverages,mains,True,440.0,0.658,True
+I00005,R001,Missi Roti,North Indian,sides,True,50.0,0.075,False
+I00006,R001,Green Tea,Beverages,mains,True,580.0,0.023,True
+I00007,R001,Seekh Kebab,North Indian,starters,False,160.0,0.454,True
+I00008,R001,Tandoori Roti,North Indian,sides,True,130.0,0.245,True
+I00009,R001,Cold Brew Coffee,Beverages,mains,True,450.0,0.41,False
+I00010,R001,Gunpowder Podi,South Indian,sides,True,170.0,0.044,True
+I00011,R002,Paal Payasam,South Indian,desserts,True,270.0,0.482,True
+I00012,R002,Coconut Chutney,South Indian,sides,True,170.0,0.149,True
+I00013,R002,Masala Dosa,South Indian,mains,True,230.0,0.229,True
+I00014,R002,Hakka Noodles,Chinese,mains,True,230.0,0.226,True
+I00015,R002,Badam Halwa,South Indian,desserts,True,180.0,0.286,True
+I00016,R002,Pav Bhaji,Street Food,mains,True,180.0,0.119,True
+I00017,R002,Curd Rice,South Indian,sides,True,150.0,0.361,True
+I00018,R002,Thalassery Biryani,Biryani,mains,True,230.0,0.144,True
+I00019,R002,Set Dosa,South Indian,mains,True,190.0,0.047,True
+I00020,R002,Wonton Soup,Chinese,sides,True,60.0,0.02,True
+I00021,R003,Cold Coffee,North Indian,beverages,True,70.0,0.204,True
+I00022,R003,Egg Biryani,Biryani,mains,False,340.0,0.062,True
+I00023,R003,Garlic Naan,North Indian,sides,True,90.0,0.031,True
+I00024,R003,Rajma Chawal,North Indian,mains,True,190.0,0.138,True
+I00025,R003,Lamb Biryani,Biryani,mains,False,270.0,0.044,False
+I00026,R003,Sweet Lassi,North Indian,beverages,True,100.0,0.079,True
+I00027,R003,Jaljeera,Biryani,beverages,True,40.0,0.366,False
+I00028,R003,Seviyan Kheer,Biryani,desserts,True,190.0,0.23,True
+I00029,R003,Kacchi Biryani,Biryani,mains,True,250.0,0.268,True
+I00030,R003,Mixed Pickle,Biryani,sides,True,70.0,0.26,True
+I00031,R004,Sugarcane Juice,Beverages,mains,True,350.0,0.263,True
+I00032,R004,Fried Ice Cream,Chinese,desserts,True,140.0,0.202,True
+I00033,R004,ABC Juice,Beverages,mains,True,260.0,0.28,True
+I00034,R004,Sev Puri,Street Food,mains,True,330.0,0.332,True
+I00035,R004,Paneer Tikka,North Indian,starters,True,230.0,0.073,True
+I00036,R004,Mosambi Juice,Beverages,mains,True,300.0,0.382,True
+I00037,R004,Sweet Lassi,North Indian,beverages,True,140.0,0.391,True
+I00038,R004,Thalassery Biryani,Biryani,mains,True,230.0,0.05,False
+I00039,R004,Cold Brew Coffee,Beverages,mains,True,230.0,0.309,True
+I00040,R004,Kulfi,North Indian,desserts,True,250.0,0.172,True
+I00041,R005,Dim Sum,Chinese,starters,True,130.0,0.247,True
+I00042,R005,Rasam,South Indian,sides,True,100.0,0.126,True
+I00043,R005,Mysore Pak,South Indian,desserts,True,180.0,0.278,True
+I00044,R005,Kanji,Street Food,beverages,True,70.0,0.26,True
+I00045,R005,Matcha Latte,Beverages,mains,True,330.0,0.262,True
+I00046,R005,Green Tea,Chinese,beverages,True,60.0,0.145,True
+I00047,R005,Sugarcane Juice,Beverages,mains,True,260.0,0.32,True
+I00048,R005,Green Tea,Beverages,mains,True,290.0,0.278,True
+I00049,R005,Mosambi Juice,Beverages,mains,True,480.0,0.084,True
+I00050,R005,Coleslaw,Fast Food,sides,True,50.0,0.308,True
+I00051,R006,Veg Manchurian,Chinese,mains,True,480.0,0.236,True
+I00052,R006,Shorba,Biryani,sides,True,80.0,0.125,True
+I00053,R006,Lemon Tea,Chinese,beverages,True,150.0,0.189,True
+I00054,R006,Coca-Cola,Chinese,beverages,True,130.0,0.621,True
+I00055,R006,Green Tea,Chinese,beverages,True,120.0,0.19,True
+I00056,R006,Manchow Soup,Chinese,sides,True,120.0,0.08,True
+I00057,R006,Nimbu Pani,Street Food,beverages,True,120.0,0.563,True
+I00058,R006,Green Tea,Beverages,mains,True,300.0,0.107,True
+I00059,R006,Fried Rice,Chinese,mains,True,230.0,0.212,True
+I00060,R006,Orange Juice,Beverages,mains,True,450.0,0.411,True
+I00061,R007,Chicken Shawarma,Fast Food,mains,False,250.0,0.334,True
+I00062,R007,Raita,Biryani,sides,True,130.0,0.384,True
+I00063,R007,Hot and Sour Soup,Chinese,sides,True,170.0,0.069,True
+I00064,R007,Mango Smoothie,Fast Food,beverages,True,100.0,0.169,True
+I00065,R007,Paneer Chilli,Chinese,mains,True,400.0,0.089,True
+I00066,R007,Honey Chilli Potato,Chinese,starters,True,150.0,0.746,True
+I00067,R007,Dim Sum,Chinese,starters,True,180.0,0.237,True
+I00068,R007,Toffee Apple,Chinese,desserts,True,120.0,0.212,False
+I00069,R007,Garlic Naan,North Indian,sides,True,120.0,0.419,True
+I00070,R007,Crispy Corn,Chinese,starters,True,320.0,0.343,True
+I00071,R008,Masala Dosa,South Indian,mains,True,490.0,0.141,True
+I00072,R008,Cold Coffee,Chinese,beverages,True,50.0,0.081,True
+I00073,R008,Onion Raita,South Indian,sides,True,170.0,0.1,True
+I00074,R008,Paneer 65,South Indian,starters,True,160.0,0.262,True
+I00075,R008,Idli Sambar,South Indian,mains,True,400.0,0.351,True
+I00076,R008,Gobi 65,South Indian,starters,True,230.0,0.236,True
+I00077,R008,Panagam,South Indian,beverages,True,110.0,0.165,True
+I00078,R008,Veg Manchurian,Chinese,mains,True,180.0,0.053,True
+I00079,R008,Chettinad Chicken Curry,South Indian,mains,False,320.0,0.266,True
+I00080,R008,Gunpowder Podi,South Indian,sides,True,100.0,0.278,True
+I00081,R009,Chicken 65,South Indian,starters,False,280.0,0.08,True
+I00082,R009,Rose Milk,South Indian,beverages,True,50.0,0.027,True
+I00083,R009,Masala Dosa,South Indian,mains,True,220.0,0.432,True
+I00084,R009,Strawberry Milkshake,Fast Food,beverages,True,40.0,0.246,True
+I00085,R009,Sweet Lassi,North Indian,beverages,True,80.0,0.194,True
+I00086,R009,Malpua,North Indian,desserts,True,200.0,0.127,True
+I00087,R009,Tomato Chutney,South Indian,sides,True,60.0,0.338,True
+I00088,R009,Gobi 65,South Indian,starters,True,340.0,0.105,True
+I00089,R009,Dum Aloo,North Indian,mains,True,380.0,0.264,True
+I00090,R009,Papad,South Indian,sides,True,160.0,0.225,True
+I00091,R010,Crispy Corn,Chinese,starters,True,150.0,0.156,True
+I00092,R010,Kadai Chicken,North Indian,mains,False,170.0,0.348,True
+I00093,R010,Tamarind Chutney,Street Food,sides,True,110.0,0.407,True
+I00094,R010,Sweet Lassi,North Indian,beverages,True,100.0,0.539,True
+I00095,R010,Schezwan Noodles,Chinese,mains,True,460.0,0.207,True
+I00096,R010,Date Pancake,Chinese,desserts,True,290.0,0.237,True
+I00097,R010,Toffee Apple,Chinese,desserts,True,100.0,0.222,True
+I00098,R010,Fanta,Biryani,beverages,True,100.0,0.173,True
+I00099,R010,Paneer Chilli,Chinese,mains,True,320.0,0.035,True
+I00100,R010,Coca-Cola,Chinese,beverages,True,60.0,0.104,True
+I00101,R011,Green Chutney,Street Food,sides,True,50.0,0.408,True
+I00102,R011,Spring Rolls,Chinese,starters,True,170.0,0.494,True
+I00103,R011,Aloo Tikki,Street Food,mains,True,340.0,0.332,True
+I00104,R011,Watermelon Juice,Beverages,mains,True,340.0,0.127,True
+I00105,R011,Onion Rings,Street Food,sides,True,130.0,0.193,True
+I00106,R011,Sev Puri,Street Food,mains,True,570.0,0.238,True
+I00107,R011,Cold Brew Coffee,Beverages,mains,True,260.0,0.14,True
+I00108,R011,Manchow Soup,Chinese,sides,True,170.0,0.12,True
+I00109,R011,Dabeli,Street Food,mains,True,420.0,0.149,False
+I00110,R011,Ganne Ka Juice,Street Food,beverages,True,130.0,0.032,True
+I00111,R012,Nimbu Pani,Street Food,beverages,True,100.0,0.153,True
+I00112,R012,Pav Bhaji,Street Food,mains,True,500.0,0.129,True
+I00113,R012,Choco Lava Cake,Fast Food,desserts,True,160.0,0.27,True
+I00114,R012,Hot Dog,Fast Food,mains,True,190.0,0.346,True
+I00115,R012,Masala Chaas,North Indian,beverages,True,130.0,0.374,True
+I00116,R012,Samosa,Street Food,mains,True,530.0,0.194,True
+I00117,R012,Keema Samosa,Biryani,starters,False,260.0,0.243,True
+I00118,R012,Kokum Sharbat,Street Food,beverages,True,120.0,0.075,True
+I00119,R012,Ragda Pattice,Street Food,starters,True,220.0,0.406,True
+I00120,R012,Mixed Pickle,Biryani,sides,True,70.0,0.303,True
+I00121,R013,Hot Chocolate,Desserts,beverages,True,130.0,0.338,True
+I00122,R013,Limca,Biryani,beverages,True,50.0,0.01,True
+I00123,R013,Paneer 65,South Indian,starters,True,130.0,0.172,True
+I00124,R013,Tangdi Kebab,Biryani,starters,False,160.0,0.276,True
+I00125,R013,Onion Raita,Biryani,sides,True,80.0,0.455,True
+I00126,R013,Fanta,Biryani,beverages,True,130.0,0.224,True
+I00127,R013,Tamatar Chutney,Biryani,sides,True,100.0,0.292,True
+I00128,R013,Shahi Tukda,Biryani,desserts,True,80.0,0.215,True
+I00129,R013,Filter Coffee,South Indian,beverages,True,110.0,0.015,True
+I00130,R013,Thums Up,Biryani,beverages,True,50.0,0.154,True
+I00131,R014,Papad,Street Food,sides,True,90.0,0.099,True
+I00132,R014,Mountain Dew,Fast Food,beverages,True,160.0,0.429,True
+I00133,R014,Lime Soda,Fast Food,beverages,True,50.0,0.484,True
+I00134,R014,Lotus Stem Chips,Chinese,starters,True,100.0,0.113,True
+I00135,R014,Mosambi Juice,Beverages,mains,True,480.0,0.142,True
+I00136,R014,Grilled Sandwich,Fast Food,mains,True,560.0,0.328,True
+I00137,R014,Iced Tea,Fast Food,beverages,True,90.0,0.086,True
+I00138,R014,7UP,Fast Food,beverages,True,90.0,0.453,True
+I00139,R014,Oreo McFlurry,Fast Food,desserts,True,270.0,0.137,True
+I00140,R014,Brownie,Fast Food,desserts,True,240.0,0.261,True
+I00141,R015,Double Ka Meetha,Biryani,desserts,True,180.0,0.388,True
+I00142,R015,Jaljeera,Street Food,beverages,True,80.0,0.124,True
+I00143,R015,Wonton Soup,Chinese,sides,True,110.0,0.217,True
+I00144,R015,Jaljeera,Biryani,beverages,True,110.0,0.251,True
+I00145,R015,Lucknawi Biryani,Biryani,mains,True,250.0,0.32,True
+I00146,R015,Onion Raita,Biryani,sides,True,120.0,0.06,True
+I00147,R015,Chicken Biryani,Biryani,mains,False,260.0,0.333,True
+I00148,R015,Thalassery Biryani,Biryani,mains,True,210.0,0.32,True
+I00149,R015,Paneer 65,South Indian,starters,True,110.0,0.041,True
+I00150,R015,Rooh Afza Sharbat,Biryani,beverages,True,90.0,0.129,True
+I00151,R016,Seviyan Kheer,Biryani,desserts,True,190.0,0.2,True
+I00152,R016,Iced Tea,Fast Food,beverages,True,110.0,0.132,True
+I00153,R016,Paneer Tikka Pizza,Fast Food,mains,True,520.0,0.021,True
+I00154,R016,Pongal,South Indian,mains,True,400.0,0.123,True
+I00155,R016,Cheesecake,Fast Food,desserts,True,120.0,0.156,True
+I00156,R016,Aam Panna,Street Food,beverages,True,60.0,0.23,True
+I00157,R016,Coleslaw,Fast Food,sides,True,130.0,0.377,True
+I00158,R016,McAloo Tikki,Fast Food,mains,True,380.0,0.297,True
+I00159,R016,Onion Rings,Street Food,sides,True,50.0,0.31,True
+I00160,R016,ABC Juice,Beverages,mains,True,530.0,0.733,True
+I00161,R017,Mysore Pak,South Indian,desserts,True,140.0,0.526,True
+I00162,R017,Pongal,South Indian,mains,True,430.0,0.045,True
+I00163,R017,Medu Vada,South Indian,mains,True,280.0,0.057,True
+I00164,R017,Rasam,South Indian,sides,True,150.0,0.116,True
+I00165,R017,Gobi 65,South Indian,starters,True,230.0,0.211,True
+I00166,R017,Neera,South Indian,beverages,True,60.0,0.193,True
+I00167,R017,Idli Sambar,South Indian,mains,True,150.0,0.298,True
+I00168,R017,Onion Raita,South Indian,sides,True,80.0,0.185,True
+I00169,R017,Jigarthanda,South Indian,beverages,True,140.0,0.097,True
+I00170,R017,Green Tea,Beverages,mains,True,270.0,0.524,True
+I00171,R018,Malai Kofta,North Indian,mains,True,350.0,0.04,True
+I00172,R018,Laccha Paratha,North Indian,sides,True,100.0,0.238,True
+I00173,R018,Malpua,North Indian,desserts,True,150.0,0.084,True
+I00174,R018,Dum Aloo,North Indian,mains,True,320.0,0.125,True
+I00175,R018,Paneer Tikka Pizza,Fast Food,mains,True,170.0,0.518,True
+I00176,R018,Rabri,North Indian,desserts,True,140.0,0.47,True
+I00177,R018,Sweet Lassi,North Indian,beverages,True,100.0,0.421,True
+I00178,R018,Waffles,Desserts,mains,True,180.0,0.196,True
+I00179,R018,Tiramisu,Desserts,mains,True,510.0,0.024,True
+I00180,R019,Sugarcane Juice,Beverages,mains,True,450.0,0.17,False
+I00181,R019,Limca,Biryani,beverages,True,80.0,0.073,True
+I00182,R019,Toffee Apple,Chinese,desserts,True,90.0,0.326,True
+I00183,R019,Tamarind Chutney,Street Food,sides,True,90.0,0.108,True
+I00184,R019,Cold Lassi,Biryani,beverages,True,100.0,0.224,True
+I00185,R019,Kacchi Biryani,Biryani,mains,True,350.0,0.203,True
+I00186,R020,Cold Lassi,Biryani,beverages,True,110.0,0.137,True
+I00187,R020,Thums Up,Biryani,beverages,True,140.0,0.299,True
+I00188,R020,Raita,Biryani,sides,True,100.0,0.492,True
+I00189,R020,Egg Biryani,Biryani,mains,False,190.0,0.355,True
+I00190,R020,Seviyan Kheer,Biryani,desserts,True,170.0,0.292,True
+I00191,R020,Onion Rings,Street Food,sides,True,160.0,0.282,True
+I00192,R020,Rajma Chawal,North Indian,mains,True,530.0,0.529,True
+I00193,R020,Lemon Tea,Chinese,beverages,True,110.0,0.444,True
+I00194,R020,Lamb Biryani,Biryani,mains,False,230.0,0.134,True
+I00195,R020,Mixed Pickle,Biryani,sides,True,100.0,0.074,True
+I00196,R021,Masala Peanuts,Street Food,sides,True,90.0,0.06,True
+I00197,R021,Margherita Pizza,Fast Food,mains,True,200.0,0.141,True
+I00198,R021,Warm Milk,Desserts,beverages,True,60.0,0.082,True
+I00199,R021,McAloo Tikki,Fast Food,mains,True,240.0,0.447,True
+I00200,R021,Lime Soda,Fast Food,beverages,True,120.0,0.349,True
+I00201,R021,7UP,Fast Food,beverages,True,100.0,0.197,True
+I00202,R021,Cheese Dip,Fast Food,sides,True,150.0,0.075,True
+I00203,R021,Dip Sauces,Fast Food,sides,True,140.0,0.214,True
+I00204,R021,Pepsi,Fast Food,beverages,True,100.0,0.336,True
+I00205,R022,Lamb Biryani,Biryani,mains,False,480.0,0.073,True
+I00206,R022,7UP,Fast Food,beverages,True,70.0,0.159,True
+I00207,R022,Date Pancake,Chinese,desserts,True,180.0,0.431,True
+I00208,R022,Tiramisu,Desserts,mains,True,520.0,0.405,True
+I00209,R022,Cheese Balls,Fast Food,starters,True,320.0,0.408,True
+I00210,R022,Banana Split,Desserts,mains,True,170.0,0.436,True
+I00211,R022,Waffles,Desserts,mains,True,440.0,0.296,True
+I00212,R022,Dip Sauces,Fast Food,sides,True,180.0,0.476,True
+I00213,R022,Orange Juice,Beverages,mains,True,360.0,0.211,True
+I00214,R022,Mango Cheesecake,Desserts,mains,True,350.0,0.559,True
+I00215,R023,Raita,Biryani,sides,True,100.0,0.152,True
+I00216,R023,Pickle,South Indian,sides,True,160.0,0.012,True
+I00217,R023,Hot Chocolate,Desserts,beverages,True,100.0,0.493,True
+I00218,R023,Sundal,South Indian,starters,True,250.0,0.067,True
+I00219,R023,Plain Dosa,South Indian,mains,True,290.0,0.05,True
+I00220,R023,Rose Milk,South Indian,beverages,True,40.0,0.341,True
+I00221,R023,Coconut Chutney,South Indian,sides,True,170.0,0.163,True
+I00222,R023,Filter Coffee,South Indian,beverages,True,100.0,0.212,True
+I00223,R023,Onion Raita,Biryani,sides,True,110.0,0.106,True
+I00224,R023,Panagam,South Indian,beverages,True,130.0,0.172,True
+I00225,R024,Gunpowder Podi,South Indian,sides,True,140.0,0.157,True
+I00226,R024,Sambar,South Indian,sides,True,190.0,0.168,True
+I00227,R024,Paneer 65,South Indian,starters,True,290.0,0.359,True
+I00228,R024,Appam with Stew,South Indian,mains,True,200.0,0.074,True
+I00229,R024,Set Dosa,South Indian,mains,True,440.0,0.205,True
+I00230,R024,Pickle,South Indian,sides,True,190.0,0.029,True
+I00231,R024,Jigarthanda,South Indian,beverages,True,40.0,0.105,True
+I00232,R024,Onion Kulcha,North Indian,sides,True,160.0,0.041,True
+I00233,R024,Papad,South Indian,sides,True,60.0,0.113,True
+I00234,R025,Mosambi Juice,Beverages,mains,True,480.0,0.238,True
+I00235,R025,Orange Juice,Beverages,mains,True,320.0,0.133,True
+I00236,R025,Matcha Latte,Beverages,mains,True,470.0,0.545,True
+I00237,R025,Rabri,North Indian,desserts,True,180.0,0.259,True
+I00238,R025,Watermelon Juice,Beverages,mains,True,230.0,0.054,True
+I00239,R025,ABC Juice,Beverages,mains,True,280.0,0.142,True
+I00240,R025,Gajar Halwa,North Indian,desserts,True,180.0,0.593,True
+I00241,R025,Pav Bhaji,Street Food,mains,True,370.0,0.25,True
+I00242,R025,Uttapam,South Indian,mains,True,250.0,0.012,True
+I00243,R025,Kiwi Smoothie,Beverages,mains,True,430.0,0.356,True
+I00244,R026,Masala Peanuts,Street Food,sides,True,80.0,0.332,True
+I00245,R026,Idli Sambar,South Indian,mains,True,240.0,0.092,True
+I00246,R026,Neer Dosa,South Indian,mains,True,360.0,0.12,True
+I00247,R026,Panna Cotta,Desserts,mains,True,210.0,0.172,True
+I00248,R026,Crème Brûlée,Desserts,mains,True,310.0,0.33,True
+I00249,R026,Mosambi Juice,Beverages,mains,True,500.0,0.288,False
+I00250,R026,Cold Brew Coffee,Beverages,mains,True,260.0,0.591,True
+I00251,R026,Jalebi,North Indian,desserts,True,100.0,0.395,True
+I00252,R026,Onion Rings,Street Food,sides,True,160.0,0.2,True
+I00253,R026,Garlic Naan,North Indian,sides,True,140.0,0.099,True
+I00254,R027,Rajma Chawal,North Indian,mains,True,410.0,0.257,True
+I00255,R027,Chicken Shawarma,Fast Food,mains,False,500.0,0.142,True
+I00256,R027,Cheese Dip,Fast Food,sides,True,60.0,0.223,True
+I00257,R027,Dip Sauces,Fast Food,sides,True,120.0,0.297,True
+I00258,R027,Reshmi Kebab,Biryani,starters,False,270.0,0.121,True
+I00259,R027,Grilled Sandwich,Fast Food,mains,True,550.0,0.121,True
+I00260,R027,Tender Coconut Water,South Indian,beverages,True,40.0,0.14,True
+I00261,R027,Donut,Fast Food,desserts,True,230.0,0.096,True
+I00262,R027,Jaljeera,Biryani,beverages,True,120.0,0.06,True
+I00263,R027,Pasta,Fast Food,sides,True,130.0,0.325,True
+I00264,R028,Banana Split,Desserts,mains,True,370.0,0.238,True
+I00265,R028,Gobi 65,South Indian,starters,True,190.0,0.258,True
+I00266,R028,Crème Brûlée,Desserts,mains,True,440.0,0.181,True
+I00267,R028,Corn Chat,Street Food,starters,True,250.0,0.167,True
+I00268,R028,Appam with Stew,South Indian,mains,True,290.0,0.016,True
+I00269,R028,Coconut Chutney,South Indian,sides,True,140.0,0.114,True
+I00270,R028,Tomato Chutney,South Indian,sides,True,140.0,0.259,True
+I00271,R028,Buttermilk,South Indian,beverages,True,120.0,0.327,True
+I00272,R028,Badam Halwa,South Indian,desserts,True,170.0,0.298,True
+I00273,R028,Tender Coconut Water,South Indian,beverages,True,70.0,0.109,True
+I00274,R029,Tres Leches,Desserts,mains,True,280.0,0.323,True
+I00275,R029,Aloo Gobi,North Indian,mains,True,510.0,0.034,True
+I00276,R029,Brownie,Fast Food,desserts,True,220.0,0.669,True
+I00277,R029,Fried Ice Cream,Chinese,desserts,True,130.0,0.225,True
+I00278,R029,Vanilla Shake,Desserts,beverages,True,120.0,0.362,True
+I00279,R029,Tiramisu,Desserts,mains,True,150.0,0.39,True
+I00280,R029,Papdi Chaat,Street Food,starters,True,120.0,0.033,True
+I00281,R029,Thandai,North Indian,beverages,True,130.0,0.131,True
+I00282,R029,Dim Sum,Chinese,starters,True,130.0,0.162,True
+I00283,R029,Chicken Shawarma,Fast Food,mains,False,520.0,0.505,True
+I00284,R030,Wonton Soup,Chinese,sides,True,60.0,0.236,True
+I00285,R030,Crispy Corn,Chinese,starters,True,170.0,0.196,True
+I00286,R030,Mango Lassi,North Indian,beverages,True,90.0,0.228,True
+I00287,R030,Mango Smoothie,Fast Food,beverages,True,110.0,0.486,True
+I00288,R030,Hot and Sour Soup,Chinese,sides,True,160.0,0.03,True
+I00289,R030,Rabri,North Indian,desserts,True,180.0,0.203,True
+I00290,R030,Veg Manchurian,Chinese,mains,True,220.0,0.029,True
+I00291,R030,Dragon Chicken,Chinese,starters,False,190.0,0.208,True
+I00292,R030,Chilli Chicken,Chinese,mains,False,560.0,0.173,True
+I00293,R030,Hakka Noodles,Chinese,mains,True,530.0,0.486,True
+I00294,R031,Panna Cotta,Desserts,mains,True,530.0,0.097,True
+I00295,R031,Hot Chocolate,Desserts,beverages,True,50.0,0.165,True
+I00296,R031,Thalassery Biryani,Biryani,mains,True,350.0,0.158,True
+I00297,R031,Curd Rice,South Indian,sides,True,110.0,0.059,True
+I00298,R031,Mango Cheesecake,Desserts,mains,True,350.0,0.31,True
+I00299,R031,Tiramisu,Desserts,mains,True,160.0,0.239,True
+I00300,R031,Uttapam,South Indian,mains,True,210.0,0.259,True
+I00301,R031,Malai Kofta,North Indian,mains,True,390.0,0.094,True
+I00302,R031,Panagam,South Indian,beverages,True,130.0,0.285,True
+I00303,R031,Tres Leches,Desserts,mains,True,260.0,0.265,True
+I00304,R032,Tiramisu,Desserts,mains,True,280.0,0.01,True
+I00305,R032,Pani Puri Shots,Street Food,starters,True,250.0,0.074,True
+I00306,R032,Red Velvet Cake,Desserts,mains,True,510.0,0.039,True
+I00307,R032,Aloo Chaat,Street Food,starters,True,240.0,0.227,True
+I00308,R032,Masala Peanuts,Street Food,sides,True,100.0,0.351,True
+I00309,R032,Jaljeera,Street Food,beverages,True,130.0,0.465,True
+I00310,R032,Papdi Chaat,Street Food,starters,True,110.0,0.501,True
+I00311,R032,Dahi Puri,Street Food,mains,True,420.0,0.426,True
+I00312,R032,Rumali Roti,North Indian,sides,True,50.0,0.393,True
+I00313,R032,Cold Brew Coffee,Beverages,mains,True,450.0,0.054,True
+I00314,R033,Matcha Latte,Beverages,mains,True,440.0,0.331,True
+I00315,R033,Green Tea,Beverages,mains,True,450.0,0.088,True
+I00316,R033,Cold Brew Coffee,Beverages,mains,True,250.0,0.147,True
+I00317,R033,Pancakes,Desserts,mains,True,280.0,0.181,True
+I00318,R033,Watermelon Juice,Beverages,mains,True,440.0,0.468,True
+I00319,R033,Mixed Fruit Juice,Beverages,mains,True,240.0,0.19,True
+I00320,R033,Prawn Biryani,Biryani,mains,False,240.0,0.56,True
+I00321,R033,Butter Milk,Biryani,beverages,True,140.0,0.146,True
+I00322,R033,Gola,Street Food,desserts,True,230.0,0.219,True
+I00323,R033,Crispy Corn,Chinese,starters,True,310.0,0.235,True
+I00324,R034,Sundae,Fast Food,desserts,True,110.0,0.115,True
+I00325,R034,Veg Manchurian,Chinese,mains,True,320.0,0.452,True
+I00326,R034,Sprite,Biryani,beverages,True,80.0,0.378,True
+I00327,R034,Soy Sauce Dip,Chinese,sides,True,140.0,0.244,True
+I00328,R034,Crispy Corn,Chinese,starters,True,340.0,0.426,True
+I00329,R034,Toffee Apple,Chinese,desserts,True,250.0,0.047,True
+I00330,R034,Pongal,South Indian,mains,True,140.0,0.086,True
+I00331,R034,Papad,South Indian,sides,True,150.0,0.137,True
+I00332,R034,Seekh Kebab,North Indian,starters,False,290.0,0.235,True
+I00333,R034,Fried Rice,Chinese,mains,True,190.0,0.012,True
+I00334,R035,Aloo Gobi,North Indian,mains,True,490.0,0.116,True
+I00335,R035,Chole Bhature,North Indian,mains,True,520.0,0.339,True
+I00336,R035,Malpua,North Indian,desserts,True,160.0,0.322,False
+I00337,R035,Lassi,North Indian,beverages,True,110.0,0.334,True
+I00338,R035,Hara Bhara Kebab,North Indian,starters,True,260.0,0.442,True
+I00339,R035,Kokum Sharbat,Street Food,beverages,True,60.0,0.163,True
+I00340,R035,Coca-Cola,Chinese,beverages,True,40.0,0.655,True
+I00341,R035,Seviyan Kheer,Biryani,desserts,True,210.0,0.433,True
+I00342,R035,Salted Lassi,North Indian,beverages,True,150.0,0.348,True
+I00343,R035,Malai Kofta,North Indian,mains,True,190.0,0.154,True
+I00344,R036,Jaljeera,Biryani,beverages,True,100.0,0.317,True
+I00345,R036,Seviyan Kheer,Biryani,desserts,True,210.0,0.07,True
+I00346,R036,Phirni,Biryani,desserts,True,240.0,0.18,True
+I00347,R036,McAloo Tikki,Fast Food,mains,True,430.0,0.547,True
+I00348,R036,Chicken Dum Biryani,Biryani,mains,False,220.0,0.089,True
+I00349,R036,Veg Biryani,Biryani,mains,True,520.0,0.53,True
+I00350,R036,Shorba,Biryani,sides,True,60.0,0.108,True
+I00351,R036,Qubani Ka Meetha,Biryani,desserts,True,190.0,0.546,True
+I00352,R036,Chicken Pizza,Fast Food,mains,False,320.0,0.274,True
+I00353,R036,Reshmi Kebab,Biryani,starters,False,260.0,0.19,True
+I00354,R037,Jigarthanda,South Indian,beverages,True,120.0,0.072,True
+I00355,R037,Sugarcane Juice,Beverages,mains,True,300.0,0.144,True
+I00356,R037,Pesarattu,South Indian,mains,True,510.0,0.161,True
+I00357,R037,Mixed Pickle,Biryani,sides,True,130.0,0.065,True
+I00358,R037,Chole Bhature,North Indian,mains,True,160.0,0.327,True
+I00359,R037,Dahi Kebab,North Indian,starters,True,140.0,0.248,True
+I00360,R037,Rumali Roti,North Indian,sides,True,140.0,0.218,True
+I00361,R037,Shahi Tukda,Biryani,desserts,True,200.0,0.247,True
+I00362,R037,ABC Juice,Beverages,mains,True,510.0,0.324,True
+I00363,R037,Plain Dosa,South Indian,mains,True,350.0,0.074,True
+I00364,R038,Pav Bhaji,Street Food,mains,True,240.0,0.059,True
+I00365,R038,Mosambi Juice,Beverages,mains,True,200.0,0.086,True
+I00366,R038,Paneer Tikka Masala,North Indian,mains,True,270.0,0.4,True
+I00367,R038,Paneer Tikka,North Indian,starters,True,250.0,0.249,True
+I00368,R038,Kadai Chicken,North Indian,mains,False,410.0,0.166,False
+I00369,R038,Rooh Afza,North Indian,beverages,True,120.0,0.204,True
+I00370,R038,Matar Paneer,North Indian,mains,True,520.0,0.032,True
+I00371,R038,Dal Makhani,North Indian,mains,True,520.0,0.148,True
+I00372,R038,Mango Lassi,North Indian,beverages,True,100.0,0.381,True
+I00373,R038,Butter Chicken,North Indian,mains,False,490.0,0.125,True
+I00374,R039,Tamatar Chutney,Biryani,sides,True,190.0,0.235,True
+I00375,R039,Lucknawi Biryani,Biryani,mains,True,270.0,0.018,True
+I00376,R039,Coca-Cola,Biryani,beverages,True,150.0,0.361,True
+I00377,R039,Tamarind Chutney,Street Food,sides,True,120.0,0.126,False
+I00378,R039,Tangdi Kebab,Biryani,starters,False,280.0,0.065,True
+I00379,R039,Mixed Fruit Juice,Beverages,mains,True,190.0,0.136,True
+I00380,R039,Cold Lassi,Biryani,beverages,True,70.0,0.641,True
+I00381,R039,Prawn Biryani,Biryani,mains,False,490.0,0.111,True
+I00382,R039,Chicken Lollipop,Biryani,starters,False,120.0,0.079,True
+I00383,R039,Onion Raita,Biryani,sides,True,110.0,0.398,True
+I00384,R040,Bhel Puri,Street Food,mains,True,370.0,0.161,False
+I00385,R040,Dal Makhani,North Indian,mains,True,510.0,0.644,True
+I00386,R040,Salted Lassi,North Indian,beverages,True,120.0,0.37,True
+I00387,R040,Ragda Pattice,Street Food,starters,True,130.0,0.18,True
+I00388,R040,Masala Peanuts,Street Food,sides,True,170.0,0.153,True
+I00389,R040,Sev,Street Food,sides,True,170.0,0.079,True
+I00390,R040,Aam Panna,Street Food,beverages,True,100.0,0.048,True
+I00391,R040,Mawa Jalebi,Street Food,desserts,True,300.0,0.051,True
+I00392,R040,Chole Kulche,Street Food,mains,True,510.0,0.199,True
+I00393,R040,Papad,Street Food,sides,True,170.0,0.185,True
+I00394,R041,Kiwi Smoothie,Beverages,mains,True,490.0,0.151,True
+I00395,R041,Warm Milk,Desserts,beverages,True,90.0,0.059,True
+I00396,R041,Paneer Tikka,North Indian,starters,True,170.0,0.25,True
+I00397,R041,Chocolate Fondue,Desserts,mains,True,370.0,0.23,True
+I00398,R041,Aloo Gobi,North Indian,mains,True,270.0,0.194,True
+I00399,R041,Banana Split,Desserts,mains,True,140.0,0.17,True
+I00400,R041,Vanilla Shake,Desserts,beverages,True,70.0,0.312,True
+I00401,R041,Dum Aloo,North Indian,mains,True,350.0,0.059,True
+I00402,R041,Filter Coffee,South Indian,beverages,True,60.0,0.181,True
+I00403,R041,Pancakes,Desserts,mains,True,500.0,0.153,True
+I00404,R042,Veg Burger,Fast Food,mains,True,210.0,0.199,True
+I00405,R042,Rasam,South Indian,sides,True,140.0,0.176,True
+I00406,R042,Chai,North Indian,beverages,True,120.0,0.056,True
+I00407,R042,Onion Raita,South Indian,sides,True,130.0,0.217,True
+I00408,R042,Chicken 65,South Indian,starters,False,190.0,0.247,True
+I00409,R042,Coconut Chutney,South Indian,sides,True,170.0,0.114,True
+I00410,R042,Tiramisu,Desserts,mains,True,270.0,0.143,True
+I00411,R042,Pesarattu,South Indian,mains,True,230.0,0.367,True
+I00412,R042,Masala Chaas,North Indian,beverages,True,120.0,0.038,True
+I00413,R042,Filter Coffee,South Indian,beverages,True,140.0,0.386,True
+I00414,R043,Wonton Soup,Chinese,sides,True,80.0,0.189,True
+I00415,R043,Cold Coffee,Chinese,beverages,True,140.0,0.155,True
+I00416,R043,Ganne Ka Juice,Street Food,beverages,True,50.0,0.522,True
+I00417,R043,Lemon Tea,Chinese,beverages,True,50.0,0.127,True
+I00418,R043,Coleslaw,Fast Food,sides,True,140.0,0.145,True
+I00419,R043,Fried Ice Cream,Chinese,desserts,True,240.0,0.17,True
+I00420,R043,Chettinad Chicken Curry,South Indian,mains,False,370.0,0.106,True
+I00421,R043,Sweet and Sour Chicken,Chinese,mains,False,520.0,0.037,True
+I00422,R043,Lotus Stem Chips,Chinese,starters,True,300.0,0.05,True
+I00423,R043,Grilled Sandwich,Fast Food,mains,True,410.0,0.29,True
+I00424,R044,Cheesecake,Fast Food,desserts,True,220.0,0.286,True
+I00425,R044,Fried Ice Cream,Chinese,desserts,True,150.0,0.239,True
+I00426,R044,Manchow Soup,Chinese,sides,True,160.0,0.369,True
+I00427,R044,Kiwi Smoothie,Beverages,mains,True,250.0,0.267,True
+I00428,R044,Orange Juice,Beverages,mains,True,490.0,0.098,True
+I00429,R044,McAloo Tikki,Fast Food,mains,True,370.0,0.305,True
+I00430,R044,Veg Burger,Fast Food,mains,True,480.0,0.07,True
+I00431,R044,Nannari Sarbat,South Indian,beverages,True,100.0,0.262,True
+I00432,R044,Coleslaw,Fast Food,sides,True,110.0,0.202,True
+I00433,R044,Cheese Balls,Fast Food,starters,True,300.0,0.676,False
+I00434,R045,Manchow Soup,Chinese,sides,True,130.0,0.158,True
+I00435,R045,Toffee Apple,Chinese,desserts,True,160.0,0.175,True
+I00436,R045,Schezwan Noodles,Chinese,mains,True,170.0,0.233,True
+I00437,R045,Spring Rolls,Chinese,starters,True,340.0,0.036,True
+I00438,R045,Dragon Chicken,Chinese,starters,False,340.0,0.252,True
+I00439,R045,Wonton Soup,Chinese,sides,True,170.0,0.098,False
+I00440,R045,Cold Coffee,Chinese,beverages,True,130.0,0.429,True
+I00441,R045,Coca-Cola,Chinese,beverages,True,110.0,0.238,True
+I00442,R045,Shahi Paneer,North Indian,mains,True,490.0,0.122,False
+I00443,R045,Hakka Noodles,Chinese,mains,True,330.0,0.049,True
+I00444,R046,Kulfi Falooda,Street Food,desserts,True,100.0,0.032,True
+I00445,R046,Ranch Sauce,Fast Food,sides,True,120.0,0.075,True
+I00446,R046,Pani Puri Shots,Street Food,starters,True,210.0,0.07,True
+I00447,R046,Oreo McFlurry,Fast Food,desserts,True,220.0,0.277,True
+I00448,R046,Kathi Roll,Street Food,mains,True,560.0,0.311,True
+I00449,R046,Dabeli,Street Food,mains,True,350.0,0.492,False
+I00450,R046,Kokum Sharbat,Street Food,beverages,True,40.0,0.212,True
+I00451,R046,Sugarcane Juice,Beverages,mains,True,370.0,0.103,True
+I00452,R046,Masala Peanuts,Street Food,sides,True,130.0,0.125,False
+I00453,R046,Papad,Street Food,sides,True,120.0,0.074,True
+I00454,R047,Butter Roti,North Indian,sides,True,160.0,0.196,True
+I00455,R047,Papad,Street Food,sides,True,60.0,0.314,True
+I00456,R047,Masala Chaas,North Indian,beverages,True,100.0,0.607,True
+I00457,R047,Mutton Rogan Josh,North Indian,mains,False,510.0,0.11,True
+I00458,R047,Nimbu Pani,Street Food,beverages,True,140.0,0.247,True
+I00459,R047,Kadai Chicken,North Indian,mains,False,390.0,0.67,True
+I00460,R047,Chicken Korma,North Indian,mains,False,470.0,0.263,True
+I00461,R047,Paneer Tikka Masala,North Indian,mains,True,280.0,0.357,True
+I00462,R047,Crispy Corn,Chinese,starters,True,260.0,0.057,True
+I00463,R047,Mango Smoothie,Fast Food,beverages,True,100.0,0.078,True
+I00464,R048,Reshmi Kebab,Biryani,starters,False,150.0,0.356,True
+I00465,R048,Chicken Nuggets,Fast Food,starters,False,110.0,0.301,True
+I00466,R048,Lime Soda,Fast Food,beverages,True,130.0,0.542,True
+I00467,R048,McAloo Tikki,Fast Food,mains,True,300.0,0.065,True
+I00468,R048,Sundae,Fast Food,desserts,True,310.0,0.294,True
+I00469,R048,Chicken Burger,Fast Food,mains,False,310.0,0.351,True
+I00470,R048,Kung Pao Chicken,Chinese,mains,False,310.0,0.262,True
+I00471,R048,Crème Brûlée,Desserts,mains,True,220.0,0.095,True
+I00472,R048,French Fries,Fast Food,mains,True,290.0,0.227,True
+I00473,R048,Donut,Fast Food,desserts,True,200.0,0.283,False
+I00474,R049,Mosambi Juice,Beverages,mains,True,330.0,0.287,False
+I00475,R049,Pongal,South Indian,mains,True,270.0,0.133,True
+I00476,R049,Gunpowder Podi,South Indian,sides,True,80.0,0.075,True
+I00477,R049,Sambar,South Indian,sides,True,70.0,0.186,True
+I00478,R049,Manchurian,Chinese,mains,True,230.0,0.174,True
+I00479,R049,Pickle,South Indian,sides,True,210.0,0.307,True
+I00480,R049,Orange Juice,Beverages,mains,True,220.0,0.148,True
+I00481,R049,Bonda,South Indian,starters,True,270.0,0.075,True
+I00482,R049,Neera,South Indian,beverages,True,50.0,0.258,True
+I00483,R049,Nannari Sarbat,South Indian,beverages,True,70.0,0.042,True
+I00484,R050,Watermelon Juice,Beverages,mains,True,250.0,0.11,True
+I00485,R050,Ragda Pattice,Street Food,starters,True,170.0,0.169,True
+I00486,R050,Kanji,Street Food,beverages,True,110.0,0.275,True
+I00487,R050,Pancakes,Desserts,mains,True,200.0,0.371,True
+I00488,R050,Mawa Jalebi,Street Food,desserts,True,280.0,0.206,True
+I00489,R050,Ganne Ka Juice,Street Food,beverages,True,70.0,0.2,True
+I00490,R050,Samosa,Street Food,mains,True,420.0,0.052,True
+I00491,R050,Hot Chocolate,Desserts,beverages,True,80.0,0.35,True
+I00492,R050,Poha,Street Food,mains,True,350.0,0.259,True
+I00493,R051,Mawa Jalebi,Street Food,desserts,True,250.0,0.052,True
+I00494,R051,Hot and Sour Soup,Chinese,sides,True,160.0,0.338,True
+I00495,R051,Strawberry Milkshake,Fast Food,beverages,True,80.0,0.34,True
+I00496,R051,French Fries,Fast Food,mains,True,470.0,0.368,True
+I00497,R051,Mango Smoothie,Fast Food,beverages,True,100.0,0.092,True
+I00498,R051,Sundae,Fast Food,desserts,True,200.0,0.038,True
+I00499,R051,Mixed Fruit Juice,Beverages,mains,True,560.0,0.123,True
+I00500,R051,Dip Sauces,Fast Food,sides,True,140.0,0.236,True
+I00501,R051,Hot Dog,Fast Food,mains,True,430.0,0.189,True
+I00502,R052,Orange Juice,Beverages,mains,True,410.0,0.161,True
+I00503,R052,ABC Juice,Beverages,mains,True,170.0,0.105,True
+I00504,R052,Sev Puri,Street Food,mains,True,280.0,0.22,True
+I00505,R052,Mixed Pickle,Biryani,sides,True,100.0,0.185,True
+I00506,R052,Kanji,Street Food,beverages,True,60.0,0.064,True
+I00507,R052,Rabri,Street Food,desserts,True,330.0,0.039,True
+I00508,R052,Onion Rings,Street Food,sides,True,160.0,0.27,True
+I00509,R052,Paal Payasam,South Indian,desserts,True,100.0,0.322,True
+I00510,R052,Sugarcane Juice,Beverages,mains,True,430.0,0.121,True
+I00511,R052,Plain Dosa,South Indian,mains,True,280.0,0.074,True
+I00512,R053,Waffles,Desserts,mains,True,490.0,0.227,True
+I00513,R053,Manchurian,Chinese,mains,True,390.0,0.135,True
+I00514,R053,Warm Milk,Desserts,beverages,True,110.0,0.213,True
+I00515,R053,Mango Cheesecake,Desserts,mains,True,420.0,0.089,True
+I00516,R053,Veg Manchurian,Chinese,mains,True,370.0,0.301,True
+I00517,R053,Mawa Jalebi,Street Food,desserts,True,250.0,0.276,True
+I00518,R053,Gola,Street Food,desserts,True,160.0,0.218,True
+I00519,R053,Palak Paneer,North Indian,mains,True,270.0,0.1,True
+I00520,R053,Soufflé,Desserts,mains,True,300.0,0.662,True
+I00521,R053,Chocolate Fondue,Desserts,mains,True,240.0,0.125,True
+I00522,R054,Nimbu Pani,Street Food,beverages,True,70.0,0.054,True
+I00523,R054,Mawa Jalebi,Street Food,desserts,True,110.0,0.491,True
+I00524,R054,Kokum Sharbat,Street Food,beverages,True,100.0,0.026,True
+I00525,R054,Samosa,Street Food,mains,True,520.0,0.073,True
+I00526,R054,Hot Chocolate,Desserts,beverages,True,90.0,0.039,True
+I00527,R054,Poha,Street Food,mains,True,310.0,0.044,True
+I00528,R054,Gola,Street Food,desserts,True,210.0,0.042,False
+I00529,R054,Jaljeera,Street Food,beverages,True,60.0,0.015,True
+I00530,R054,Aam Panna,Street Food,beverages,True,110.0,0.44,True
+I00531,R054,Green Chutney,Street Food,sides,True,70.0,0.045,True
+I00532,R055,Rava Dosa,South Indian,mains,True,460.0,0.386,True
+I00533,R055,Uttapam,South Indian,mains,True,500.0,0.206,True
+I00534,R055,Shorba,Biryani,sides,True,170.0,0.109,False
+I00535,R055,Mutton Biryani,Biryani,mains,False,500.0,0.508,True
+I00536,R055,Gunpowder Podi,South Indian,sides,True,120.0,0.04,True
+I00537,R055,Payasam,South Indian,desserts,True,210.0,0.311,True
+I00538,R055,Dim Sum,Chinese,starters,True,260.0,0.243,True
+I00539,R055,Warm Milk,Desserts,beverages,True,40.0,0.051,False
+I00540,R055,Idli Sambar,South Indian,mains,True,360.0,0.096,True
+I00541,R055,Gobi 65,South Indian,starters,True,290.0,0.186,True
+I00542,R056,ABC Juice,Beverages,mains,True,190.0,0.025,True
+I00543,R056,Soy Sauce Dip,Chinese,sides,True,130.0,0.303,True
+I00544,R056,Chilli Chicken,Chinese,mains,False,450.0,0.23,True
+I00545,R056,Mixed Fruit Juice,Beverages,mains,True,550.0,0.215,True
+I00546,R056,Garlic Bread,Fast Food,sides,True,70.0,0.392,True
+I00547,R056,Choco Lava Cake,Fast Food,desserts,True,80.0,0.303,True
+I00548,R056,Crispy Chicken Wrap,Fast Food,mains,False,300.0,0.01,True
+I00549,R056,Kiwi Smoothie,Beverages,mains,True,460.0,0.451,True
+I00550,R056,Dum Aloo,North Indian,mains,True,220.0,0.23,False
+I00551,R056,Nimbu Pani,Street Food,beverages,True,40.0,0.096,True
+I00552,R057,Fanta,Biryani,beverages,True,60.0,0.111,True
+I00553,R057,Kacchi Biryani,Biryani,mains,True,280.0,0.546,True
+I00554,R057,Lamb Biryani,Biryani,mains,False,220.0,0.13,True
+I00555,R057,Double Ka Meetha,Biryani,desserts,True,90.0,0.168,True
+I00556,R057,Pav Bhaji,Street Food,mains,True,540.0,0.281,True
+I00557,R057,Neera,South Indian,beverages,True,50.0,0.268,True
+I00558,R057,Paneer Biryani,Biryani,mains,True,410.0,0.324,True
+I00559,R057,Mixed Pickle,Biryani,sides,True,150.0,0.319,True
+I00560,R057,Qubani Ka Meetha,Biryani,desserts,True,250.0,0.431,True
+I00561,R057,Prawn Biryani,Biryani,mains,False,390.0,0.313,True
+I00562,R058,Chicken Shawarma,Fast Food,mains,False,510.0,0.165,True
+I00563,R058,Cold Coffee Frappe,Fast Food,beverages,True,90.0,0.106,True
+I00564,R058,Crispy Chicken Wrap,Fast Food,mains,False,240.0,0.016,True
+I00565,R058,Mixed Fruit Juice,Beverages,mains,True,560.0,0.333,True
+I00566,R058,McAloo Tikki,Fast Food,mains,True,490.0,0.376,True
+I00567,R058,Grilled Sandwich,Fast Food,mains,True,310.0,0.352,True
+I00568,R058,Potato Wedges,Fast Food,starters,True,310.0,0.166,True
+I00569,R058,Spring Rolls,Chinese,starters,True,250.0,0.05,True
+I00570,R058,Mango Smoothie,Fast Food,beverages,True,40.0,0.167,True
+I00571,R058,Mountain Dew,Fast Food,beverages,True,90.0,0.344,True
+I00572,R059,Aloo Tikki,Street Food,mains,True,380.0,0.39,True
+I00573,R059,Hot Chocolate,Desserts,beverages,True,60.0,0.03,True
+I00574,R059,Crème Brûlée,Desserts,mains,True,380.0,0.246,True
+I00575,R059,Red Velvet Cake,Desserts,mains,True,400.0,0.473,True
+I00576,R059,Vanilla Shake,Desserts,beverages,True,50.0,0.66,True
+I00577,R059,Lucknawi Biryani,Biryani,mains,True,540.0,0.153,True
+I00578,R059,Plain Dosa,South Indian,mains,True,190.0,0.478,True
+I00579,R059,Pancakes,Desserts,mains,True,350.0,0.086,True
+I00580,R059,Panna Cotta,Desserts,mains,True,560.0,0.238,True
+I00581,R059,Chicken Lollipop,Biryani,starters,False,220.0,0.352,True
+I00582,R060,Chettinad Chicken Curry,South Indian,mains,False,470.0,0.263,True
+I00583,R060,Nannari Sarbat,South Indian,beverages,True,80.0,0.217,True
+I00584,R060,Vada Pav,Street Food,mains,True,400.0,0.247,True
+I00585,R060,Filter Coffee,South Indian,beverages,True,140.0,0.241,True
+I00586,R060,Paal Payasam,South Indian,desserts,True,160.0,0.101,True
+I00587,R060,Gobi 65,South Indian,starters,True,250.0,0.241,True
+I00588,R060,Bhel Puri,Street Food,mains,True,340.0,0.064,True
+I00589,R060,Plain Dosa,South Indian,mains,True,350.0,0.094,True
+I00590,R060,Chilli Chicken,Chinese,mains,False,380.0,0.112,True
+I00591,R060,Tender Coconut Water,South Indian,beverages,True,140.0,0.349,True
+I00592,R061,Kulfi Falooda,Street Food,desserts,True,230.0,0.461,True
+I00593,R061,Aloo Tikki,Street Food,mains,True,310.0,0.034,True
+I00594,R061,Papad,Street Food,sides,True,80.0,0.197,True
+I00595,R061,Tres Leches,Desserts,mains,True,210.0,0.244,True
+I00596,R061,Dabeli,Street Food,mains,True,470.0,0.166,False
+I00597,R061,Soy Sauce Dip,Chinese,sides,True,110.0,0.13,True
+I00598,R061,Pani Puri,Street Food,mains,True,460.0,0.026,True
+I00599,R061,Aloo Chaat,Street Food,starters,True,100.0,0.369,True
+I00600,R061,Papdi Chaat,Street Food,starters,True,140.0,0.322,True
+I00601,R061,Corn Chat,Street Food,starters,True,270.0,0.408,False
+I00602,R062,Mixed Fruit Juice,Beverages,mains,True,410.0,0.069,True
+I00603,R062,Banana Split,Desserts,mains,True,430.0,0.124,True
+I00604,R062,Waffles,Desserts,mains,True,370.0,0.395,True
+I00605,R062,Panna Cotta,Desserts,mains,True,430.0,0.077,True
+I00606,R062,Chocolate Fondue,Desserts,mains,True,330.0,0.487,True
+I00607,R062,Warm Milk,Desserts,beverages,True,100.0,0.171,True
+I00608,R062,Tiramisu,Desserts,mains,True,370.0,0.577,True
+I00609,R062,Soufflé,Desserts,mains,True,320.0,0.149,True
+I00610,R062,Pav Bhaji,Street Food,mains,True,250.0,0.137,True
+I00611,R062,Red Velvet Cake,Desserts,mains,True,440.0,0.17,True
+I00612,R063,Mango Cheesecake,Desserts,mains,True,310.0,0.291,True
+I00613,R063,Curd Rice,South Indian,sides,True,160.0,0.376,True
+I00614,R063,Dabeli,Street Food,mains,True,510.0,0.311,True
+I00615,R063,Rasam,South Indian,sides,True,160.0,0.194,True
+I00616,R063,Buttermilk,South Indian,beverages,True,100.0,0.027,True
+I00617,R063,Idli Sambar,South Indian,mains,True,530.0,0.04,True
+I00618,R063,Rava Dosa,South Indian,mains,True,520.0,0.332,True
+I00619,R063,Watermelon Juice,Beverages,mains,True,550.0,0.116,True
+I00620,R063,Tomato Chutney,South Indian,sides,True,90.0,0.157,False
+I00621,R063,Panagam,South Indian,beverages,True,50.0,0.32,True
+I00622,R064,Chocolate Fondue,Desserts,mains,True,440.0,0.214,True
+I00623,R064,Masala Dosa,South Indian,mains,True,260.0,0.375,True
+I00624,R064,Crème Brûlée,Desserts,mains,True,540.0,0.044,True
+I00625,R064,Sugarcane Juice,Beverages,mains,True,260.0,0.109,True
+I00626,R064,Choco Lava Cake,Fast Food,desserts,True,100.0,0.224,True
+I00627,R064,Ranch Sauce,Fast Food,sides,True,100.0,0.154,True
+I00628,R064,Green Tea,Beverages,mains,True,190.0,0.018,True
+I00629,R064,Chole Kulche,Street Food,mains,True,250.0,0.206,True
+I00630,R064,Rabri,Street Food,desserts,True,200.0,0.067,False
+I00631,R064,Banana Split,Desserts,mains,True,370.0,0.136,False
+I00632,R065,Jigarthanda,South Indian,beverages,True,80.0,0.082,True
+I00633,R065,Watermelon Juice,Beverages,mains,True,300.0,0.168,True
+I00634,R065,Poha,Street Food,mains,True,430.0,0.111,True
+I00635,R065,Tiramisu,Desserts,mains,True,230.0,0.08,False
+I00636,R065,Tender Coconut Water,South Indian,beverages,True,150.0,0.275,True
+I00637,R065,Ragda Pattice,Street Food,starters,True,160.0,0.38,True
+I00638,R065,Cold Coffee,North Indian,beverages,True,50.0,0.516,True
+I00639,R065,Panna Cotta,Desserts,mains,True,370.0,0.364,True
+I00640,R065,ABC Juice,Beverages,mains,True,300.0,0.364,True
+I00641,R065,Tres Leches,Desserts,mains,True,150.0,0.093,True
+I00642,R066,Panna Cotta,Desserts,mains,True,370.0,0.225,True
+I00643,R066,Vanilla Shake,Desserts,beverages,True,70.0,0.396,True
+I00644,R066,Waffles,Desserts,mains,True,340.0,0.245,True
+I00645,R066,Tres Leches,Desserts,mains,True,560.0,0.083,True
+I00646,R066,Cold Brew Coffee,Beverages,mains,True,310.0,0.105,True
+I00647,R066,Crème Brûlée,Desserts,mains,True,350.0,0.049,True
+I00648,R066,Tiramisu,Desserts,mains,True,510.0,0.122,True
+I00649,R066,Pasta,Fast Food,sides,True,170.0,0.083,True
+I00650,R066,Plain Dosa,South Indian,mains,True,260.0,0.051,False
+I00651,R066,Margherita Pizza,Fast Food,mains,True,200.0,0.165,True
+I00652,R067,Coca-Cola,Biryani,beverages,True,80.0,0.543,True
+I00653,R067,Hyderabadi Biryani,Biryani,mains,True,500.0,0.181,True
+I00654,R067,Mixed Pickle,Biryani,sides,True,60.0,0.251,True
+I00655,R067,Vada Pav,Street Food,mains,True,490.0,0.136,True
+I00656,R067,Dabeli,Street Food,mains,True,460.0,0.099,True
+I00657,R067,Phirni,Biryani,desserts,True,110.0,0.063,True
+I00658,R067,Shahi Tukda,Biryani,desserts,True,240.0,0.177,True
+I00659,R067,Pani Puri,Street Food,mains,True,260.0,0.072,True
+I00660,R067,Manchow Soup,Chinese,sides,True,150.0,0.362,True
+I00661,R067,Onion Raita,Biryani,sides,True,160.0,0.292,True
+I00662,R068,Mutton Rogan Josh,North Indian,mains,False,300.0,0.107,True
+I00663,R068,Hakka Noodles,Chinese,mains,True,570.0,0.119,True
+I00664,R068,Kokum Sharbat,Street Food,beverages,True,150.0,0.055,True
+I00665,R068,Chilli Chicken,Chinese,mains,False,290.0,0.027,True
+I00666,R068,Date Pancake,Chinese,desserts,True,310.0,0.488,True
+I00667,R068,Fried Rice,Chinese,mains,True,350.0,0.236,True
+I00668,R068,Manchow Soup,Chinese,sides,True,110.0,0.105,True
+I00669,R068,Chole Kulche,Street Food,mains,True,390.0,0.157,True
+I00670,R068,Crispy Corn,Chinese,starters,True,200.0,0.021,True
+I00671,R068,Toffee Apple,Chinese,desserts,True,250.0,0.489,True
+I00672,R069,Cheese Balls,Fast Food,starters,True,110.0,0.089,True
+I00673,R069,Mosambi Juice,Beverages,mains,True,350.0,0.036,True
+I00674,R069,Sambar,South Indian,sides,True,70.0,0.318,True
+I00675,R069,7UP,Fast Food,beverages,True,70.0,0.072,True
+I00676,R069,Jalapeno Poppers,Fast Food,starters,True,310.0,0.433,True
+I00677,R069,Cold Brew Coffee,Beverages,mains,True,510.0,0.033,True
+I00678,R069,Dahi Puri,Street Food,mains,True,190.0,0.064,True
+I00679,R069,Sundae,Fast Food,desserts,True,160.0,0.162,True
+I00680,R069,French Fries,Fast Food,mains,True,490.0,0.436,True
+I00681,R070,Mixed Pickle,Biryani,sides,True,110.0,0.252,True
+I00682,R070,Egg Biryani,Biryani,mains,False,240.0,0.68,True
+I00683,R070,Onion Raita,Biryani,sides,True,160.0,0.041,True
+I00684,R070,Kacchi Biryani,Biryani,mains,True,210.0,0.294,True
+I00685,R070,Chicken Biryani,Biryani,mains,False,540.0,0.351,True
+I00686,R070,Prawn Biryani,Biryani,mains,False,180.0,0.043,True
+I00687,R070,Kadai Chicken,North Indian,mains,False,550.0,0.159,True
+I00688,R070,Filter Coffee,South Indian,beverages,True,160.0,0.178,True
+I00689,R070,Reshmi Kebab,Biryani,starters,False,150.0,0.113,True
+I00690,R070,Tangdi Kebab,Biryani,starters,False,220.0,0.266,True
+I00691,R071,Mutton Rogan Josh,North Indian,mains,False,180.0,0.4,True
+I00692,R071,Dum Aloo,North Indian,mains,True,510.0,0.233,True
+I00693,R071,Gola,Street Food,desserts,True,210.0,0.046,False
+I00694,R071,Jalebi,North Indian,desserts,True,230.0,0.131,True
+I00695,R071,Chai,North Indian,beverages,True,60.0,0.314,True
+I00696,R071,Kadai Chicken,North Indian,mains,False,340.0,0.029,True
+I00697,R071,Palak Paneer,North Indian,mains,True,510.0,0.07,True
+I00698,R071,Chicken Tikka,North Indian,starters,False,170.0,0.092,False
+I00699,R071,Sugarcane Juice,Beverages,mains,True,300.0,0.354,True
+I00700,R071,Seekh Kebab,North Indian,starters,False,90.0,0.323,True
+I00701,R072,Cheese Balls,Fast Food,starters,True,260.0,0.612,True
+I00702,R072,Sol Kadhi,Street Food,beverages,True,90.0,0.257,True
+I00703,R072,Aloo Tikki,Street Food,mains,True,330.0,0.204,True
+I00704,R072,Iced Tea,Fast Food,beverages,True,50.0,0.295,True
+I00705,R072,Coleslaw,Fast Food,sides,True,80.0,0.015,True
+I00706,R072,Potato Wedges,Fast Food,starters,True,260.0,0.162,True
+I00707,R072,Mountain Dew,Fast Food,beverages,True,100.0,0.113,True
+I00708,R072,Margherita Pizza,Fast Food,mains,True,390.0,0.429,True
+I00709,R072,Matcha Latte,Beverages,mains,True,190.0,0.203,True
+I00710,R073,Tamatar Chutney,Biryani,sides,True,60.0,0.461,True
+I00711,R073,Keema Samosa,Biryani,starters,False,100.0,0.224,True
+I00712,R073,Rooh Afza Sharbat,Biryani,beverages,True,60.0,0.036,True
+I00713,R073,Sambar,South Indian,sides,True,190.0,0.125,True
+I00714,R073,Double Ka Meetha,Biryani,desserts,True,270.0,0.163,True
+I00715,R073,Qubani Ka Meetha,Biryani,desserts,True,130.0,0.024,True
+I00716,R073,Coca-Cola,Biryani,beverages,True,110.0,0.394,True
+I00717,R073,Nannari Sarbat,South Indian,beverages,True,100.0,0.235,True
+I00718,R073,Kacchi Biryani,Biryani,mains,True,500.0,0.016,True
+I00719,R073,Raita,Biryani,sides,True,100.0,0.225,True
+I00720,R074,Matka Kulfi,Street Food,desserts,True,160.0,0.109,True
+I00721,R074,Aloo Chaat,Street Food,starters,True,350.0,0.098,True
+I00722,R074,Papdi Chaat,Street Food,starters,True,200.0,0.583,False
+I00723,R074,Nannari Sarbat,South Indian,beverages,True,80.0,0.397,True
+I00724,R074,Kathi Roll,Street Food,mains,True,330.0,0.263,True
+I00725,R074,Chocolate Fondue,Desserts,mains,True,480.0,0.432,True
+I00726,R074,Poha,Street Food,mains,True,470.0,0.376,True
+I00727,R074,French Fries,Fast Food,mains,True,320.0,0.31,True
+I00728,R074,Aloo Tikki,Street Food,mains,True,230.0,0.138,True
+I00729,R074,Sev,Street Food,sides,True,90.0,0.276,True
+I00730,R075,Oreo McFlurry,Fast Food,desserts,True,160.0,0.309,True
+I00731,R075,Margherita Pizza,Fast Food,mains,True,260.0,0.136,True
+I00732,R075,Matcha Latte,Beverages,mains,True,420.0,0.344,True
+I00733,R075,Cheese Dip,Fast Food,sides,True,60.0,0.497,False
+I00734,R075,Chicken Pizza,Fast Food,mains,False,260.0,0.177,False
+I00735,R075,Donut,Fast Food,desserts,True,150.0,0.083,True
+I00736,R075,Crispy Chicken Wrap,Fast Food,mains,False,500.0,0.021,True
+I00737,R075,Choco Lava Cake,Fast Food,desserts,True,260.0,0.467,True
+I00738,R075,Mozzarella Sticks,Fast Food,starters,True,260.0,0.522,True
+I00739,R075,Potato Wedges,Fast Food,starters,True,320.0,0.146,True
+I00740,R076,Cheese Balls,Fast Food,starters,True,330.0,0.255,True
+I00741,R076,Crispy Corn,Chinese,starters,True,110.0,0.16,True
+I00742,R076,Spring Rolls,Chinese,starters,True,190.0,0.135,True
+I00743,R076,Mountain Dew,Fast Food,beverages,True,130.0,0.2,True
+I00744,R076,Dragon Chicken,Chinese,starters,False,290.0,0.385,True
+I00745,R076,Jaljeera,Biryani,beverages,True,140.0,0.473,True
+I00746,R076,Veg Burger,Fast Food,mains,True,430.0,0.024,True
+I00747,R076,French Fries,Fast Food,mains,True,240.0,0.087,True
+I00748,R076,Grilled Sandwich,Fast Food,mains,True,220.0,0.031,True
+I00749,R076,Lassi,North Indian,beverages,True,60.0,0.118,True
+I00750,R077,ABC Juice,Beverages,mains,True,320.0,0.355,True
+I00751,R077,Dum Aloo,North Indian,mains,True,270.0,0.175,True
+I00752,R077,Paneer 65,South Indian,starters,True,130.0,0.117,True
+I00753,R077,Mysore Pak,South Indian,desserts,True,150.0,0.274,True
+I00754,R077,Rava Kesari,South Indian,desserts,True,240.0,0.312,True
+I00755,R077,Rose Milk,South Indian,beverages,True,40.0,0.082,True
+I00756,R077,Fanta,Biryani,beverages,True,120.0,0.24,True
+I00757,R077,Papad,South Indian,sides,True,190.0,0.648,False
+I00758,R077,Masala Dosa,South Indian,mains,True,240.0,0.126,True
+I00759,R077,Neer Dosa,South Indian,mains,True,420.0,0.546,True
+I00760,R078,Papdi Chaat,Street Food,starters,True,270.0,0.276,True
+I00761,R078,Vanilla Shake,Desserts,beverages,True,80.0,0.126,True
+I00762,R078,Aam Panna,Street Food,beverages,True,150.0,0.132,True
+I00763,R078,Poha,Street Food,mains,True,480.0,0.354,True
+I00764,R078,Rabri,Street Food,desserts,True,310.0,0.078,True
+I00765,R078,Matka Kulfi,Street Food,desserts,True,230.0,0.576,True
+I00766,R078,Uttapam,South Indian,mains,True,560.0,0.316,True
+I00767,R078,Matcha Latte,Beverages,mains,True,240.0,0.094,True
+I00768,R078,Papad,Street Food,sides,True,70.0,0.166,True
+I00769,R079,Aloo Tikki,Street Food,mains,True,190.0,0.057,True
+I00770,R079,Mango Lassi,North Indian,beverages,True,90.0,0.22,True
+I00771,R079,Garlic Naan,North Indian,sides,True,60.0,0.195,True
+I00772,R079,Kheer,North Indian,desserts,True,120.0,0.178,True
+I00773,R079,Paneer Tikka,North Indian,starters,True,310.0,0.364,True
+I00774,R079,Cold Coffee,North Indian,beverages,True,130.0,0.435,True
+I00775,R079,Salted Lassi,North Indian,beverages,True,140.0,0.297,True
+I00776,R079,Kulfi,North Indian,desserts,True,230.0,0.146,True
+I00777,R079,Rose Milk,South Indian,beverages,True,80.0,0.074,True
+I00778,R079,Malpua,North Indian,desserts,True,160.0,0.424,False
+I00779,R080,Manchow Soup,Chinese,sides,True,160.0,0.176,True
+I00780,R080,Green Tea,Chinese,beverages,True,50.0,0.262,True
+I00781,R080,Mango Smoothie,Fast Food,beverages,True,110.0,0.357,True
+I00782,R080,Lotus Stem Chips,Chinese,starters,True,320.0,0.222,True
+I00783,R080,Fried Ice Cream,Chinese,desserts,True,90.0,0.286,True
+I00784,R080,Chocolate Fondue,Desserts,mains,True,450.0,0.332,True
+I00785,R080,Hot Dog,Fast Food,mains,True,290.0,0.161,True
+I00786,R080,Hakka Noodles,Chinese,mains,True,480.0,0.589,True
+I00787,R080,Soy Sauce Dip,Chinese,sides,True,130.0,0.23,True
+I00788,R080,Wonton Soup,Chinese,sides,True,60.0,0.295,True
